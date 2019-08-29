@@ -13,5 +13,5 @@ npm run dev
 ```
 
 ## Troubleshooting
-> If you are having any issues **don't** contact me.
+> If you are having any issues, let me know.
 
