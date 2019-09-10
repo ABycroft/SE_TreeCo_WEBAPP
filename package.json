@@ -7,7 +7,7 @@
     "client-install": "npm install --prefix client",
     "client-build": "npm run build --prefix client",
     "client": "npm start --prefix client",
-    "start": "node server.js",
+    "start": "npm run dev",
     "server": "node server.js",
     "database": "",
     "dev": "npm run database & concurrently \"npm run server\" \"npm run client\""
