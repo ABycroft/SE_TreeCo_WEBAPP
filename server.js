@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const mysql = require('mysql');
 const path = require('path');
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 // This line will set the database hostname depending on the NODE_ENV variable.
 // This variable is set when the application is launched in the docker container.
