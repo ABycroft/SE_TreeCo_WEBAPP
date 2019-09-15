@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import './CSS/App.css';
-import Header from "./layout/header/Header"
-import Main from './pages/main/Main';
-import Home from './pages/home/Home';
+import './App.css';
+import Header from "./header/Header"
+import Store from './store/Store';
+import Home from './home/Home';
 
 /**
  * App.js is the starting point for the React App. 
@@ -16,7 +16,7 @@ function App() {
                 <Header/>
                 <div className="container">
                     <Route exact path = "/" component={Home}/>
-                    <Route path = "/main" component={Main}/>
+                    <Route path = "/store" component={Store}/>
                 </div>
             </Router>
         </div>

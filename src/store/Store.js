@@ -5,14 +5,14 @@ import React, { Component } from 'react'
  * Just another component that holds more components.
  * In app.js we are using react-router-dom to switch these page components.
  */
-class Main extends Component {
+class Store extends Component {
     render() {
         return (
             <div>
-                <h2>Main Page</h2>
+                <h2>Store Page</h2>
             </div>
         )
     }
 }
 
-export default Main
+export default Store

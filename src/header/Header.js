@@ -3,17 +3,16 @@ import { Link } from 'react-router-dom';
 
 import './header.css';
 
-
 function Header() {
 
     return (
-
         <header >
-            <div className="logo">
-                logo
+            <div className='top-bar'>
             </div>
-            <Link to="/"><h1>TreeCo WebApp</h1></Link>
 
+            <div className='title-bar'>
+                <h1><Link to="/">Header</Link></h1>
+            </div>
         </header>
     )
 }
