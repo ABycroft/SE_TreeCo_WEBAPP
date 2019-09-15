@@ -1,8 +1,9 @@
 {
-  "name": "se_treeco-webapp",
+  "name": "se_treeco_webapp",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "npm": "^6.11.3",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-router-dom": "^5.0.1",
@@ -28,5 +29,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "engines": {
+    "node": "8.12.0"
   }
 }
