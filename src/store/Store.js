@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import TreeList from "./TreeList";
 
 /**
  * This is a page component.
@@ -10,6 +11,7 @@ class Store extends Component {
         return (
             <div>
                 <h2>Store Page</h2>
+                <TreeList/>
             </div>
         )
     }
