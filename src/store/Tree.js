@@ -4,7 +4,7 @@ class Tree extends Component {
     render() {
         return (
             <div>
-                <h2>Product List</h2>
+                <h2>Tree Class</h2>
             </div>
         )
     }
