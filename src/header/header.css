@@ -3,19 +3,12 @@ header {
     top: 0;
 }
 
-.top-bar {
-    background-color: #4F1852;
-    width: inherit;
-    height: 30px;
-}
-
 .title-bar {
     width: inherit;
-    background-color: #753B76;
+    background-color: #138b53;
     height: 60px;
     padding: 5px;
 }
-
 
 .logo {
     margin-left: 1em;
@@ -23,14 +16,32 @@ header {
     height: 100px;
 }
 
-h1 {
-    margin-left: 125px;
-    margin-top: 10px;
-    color: #F8D9D9;
+li {
+    padding: 10px;
+    height: 100%;
 }
 
-h1 > a {
-    color: #F8D9D9;
+li:hover {
+    background-color: #0e663d
+}
+
+li>a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+li>a:hover {
+    text-decoration: none;
+    color: #d4d4d4;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+.right {
+    float: right;
 }
 
 .top-bar-menu {

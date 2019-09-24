@@ -4,6 +4,7 @@ import './App.css';
 import Header from "./header/Header"
 import Store from './store/Store';
 import Home from './home/Home';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 /**
  * App.js is the starting point for the React App. 
