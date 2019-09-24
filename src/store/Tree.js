@@ -13,9 +13,9 @@ export default class Tree extends Component {
 
             <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3">
                     <div>
-                    <Card bg="secondary text-white" style={{ width: '18rem' }}>
-                    <Card.Img  variant="top" src={img} alt="tree" className="card-img-top mb-1" onClick={()=>console.log("image clicked")}  />
-                    <Card.Body >
+                    <Card bg="secondary text-white" style={{ width: '18rem',backgroundColor:'#05386b' }}>
+                    <Card.Img  width="300px" height="200px" variant="top" src={img} alt="tree" className="card-img-top mb-1" onClick={()=>console.log("image clicked")}  />
+                    <Card.Body style={{backgroundColor:'#05386b'}}>
                         <Card.Title >Card Title</Card.Title>
                         <Card.Text>
                         Some quick example text to build on the card title and make up the bulk of

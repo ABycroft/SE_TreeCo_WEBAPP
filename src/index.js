@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {TreesProvider} from "./context";
-
+import 'semantic-ui-css/semantic.min.css'
 ReactDOM.render(
     <TreesProvider>
         <App />
