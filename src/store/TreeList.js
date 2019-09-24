@@ -10,7 +10,7 @@ class TreeList extends Component {
         //console.log(this.state.trees);
         return (
             <div className="container py-5">
-                <h2>Product List</h2>
+                
                 <div className="row">
                     <TreesConsumer>
                         {value => {
