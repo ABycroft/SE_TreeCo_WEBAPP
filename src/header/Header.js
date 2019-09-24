@@ -7,7 +7,9 @@ function Header() {
 
     return (
         <header >
+            
             <div className='title-bar'>
+            
                 <ul className="right">
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/store">Store</Link></li>

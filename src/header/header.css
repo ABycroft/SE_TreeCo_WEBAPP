@@ -5,9 +5,11 @@ header {
 
 .title-bar {
     width: inherit;
-    background-color: #138b53;
-    height: 60px;
+    background-color: #5cdb95;
+    height: 50px;
     padding: 5px;
+    
+    text-align: left;
 }
 
 .logo {
@@ -17,12 +19,14 @@ header {
 }
 
 li {
+    
     padding: 10px;
+  
     height: 100%;
 }
 
 li:hover {
-    background-color: #0e663d
+    background-color: #05386b;
 }
 
 li>a {
@@ -38,10 +42,13 @@ li>a:hover {
 ul {
     display: flex;
     list-style: none;
+    
 }
 
 .right {
     float: right;
+    
+    margin-bottom: 10px;
 }
 
 .top-bar-menu {
