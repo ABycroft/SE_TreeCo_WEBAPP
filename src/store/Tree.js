@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { TreesConsumer } from '../context';
+import './tree.css';
 
 // 1:56:54
 
@@ -13,7 +14,7 @@ export default class Tree extends Component {
                 <div className="card">
                     <div className="img-container p-5" >
                     <Link to="/details">
-                        <img src={img} alt="tree" className="card-img-top mb-1" onClick={()=>console.log("image clicked")}/>
+                        <img src={img} alt="tree" className="tree-image card-img-top mb-1" onClick={()=>console.log("image clicked")}/>
                     </Link>
                     <button className="btnCart" disabled={inCart ? true:false} onClick={()=>{console.log("added to cart clicked")}}>
                         {inCart?(<p className="text-capitalize mb-0" disabled>
