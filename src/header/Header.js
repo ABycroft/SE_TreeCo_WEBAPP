@@ -1,11 +1,10 @@
 import React from 'react';
-import { Button } from 'semantic-ui-react'
-import { Link } from 'react-router-dom';
+
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+
 import './header.css';
-import { Menu, Segment } from 'semantic-ui-react'
+
 function Header() {
 
     return (
