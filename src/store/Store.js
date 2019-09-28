@@ -11,7 +11,7 @@ class Store extends Component {
     render() {
         return (
             <div className="title">
-                <h2 style={{paddingTop:'50px',color:"#05386b"}}>Produce List</h2>
+                <h2 style={{color:"#05386b"}}>Produce List</h2>
                 <TreeList/>
             </div>
         )

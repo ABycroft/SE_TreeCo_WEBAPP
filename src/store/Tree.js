@@ -21,12 +21,12 @@ export default class Tree extends Component {
                             Some quick example text to build on the card title and make up the bulk of
                             the card's content.
                         </p>
-                        <Button onClick={()=>console.log("button clicked")} style={{backgroundColor:"#379683",color:"#ffffff"}}  variant="light">Go somewhere</Button>
+                        <Button onClick={()=>console.log("Add to Cart")} disabled={inCart?false:true}style={{backgroundColor:"#60DA99",color:"#ffffff"}}  variant="light">Go somewhere</Button>
                     </Card.Body>
                 </Card> 
             </ProductWrapper>
         )
-    }
+    } // Old button color was #379683
 }
 
 const ProductWrapper = styled.div`
