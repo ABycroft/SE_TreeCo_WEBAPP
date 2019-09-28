@@ -5,7 +5,9 @@ import { TreesConsumer } from '../context';
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import './tree.css';
-// 1:56:54
+
+
+// https://youtu.be/wPQ1-33teR4?t=7714
 
 export default class Tree extends Component {
     render() {
@@ -21,7 +23,9 @@ export default class Tree extends Component {
                             Some quick example text to build on the card title and make up the bulk of
                             the card's content.
                         </p>
-                        <Button onClick={()=>console.log("Add to Cart")} disabled={inCart?false:true}style={{backgroundColor:"#60DA99",color:"#ffffff"}}  variant="light">Go somewhere</Button>
+                        <Button onClick={()=>console.log("clicked Add to Cart")} disabled={inCart?true:false}style={{backgroundColor:"#60DA99",color:"#ffffff"}}  variant="light">
+                            {inCart?(<p className="test-capitalize mb-0">In Cart</p>):(<p className="test-capitalize mb-0">Add to Cart</p>)}
+                        </Button>
                     </Card.Body>
                 </Card> 
             </ProductWrapper>
