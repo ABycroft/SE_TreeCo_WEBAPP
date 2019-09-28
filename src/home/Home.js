@@ -9,6 +9,11 @@ import './home.css';
  */
 class Home extends Component {
     render() {
+        window.onload = function() {
+            document.getElementById("home").classList.add('active');
+            document.getElementById('store').classList.remove('active');
+            document.getElementById('cart').classList.remove('active');
+        }
         return (
             <div className='home-content'>
                 <h2>Home page</h2>
