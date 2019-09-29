@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './header.css'
 
-class Nav extends Component {
+class Header extends Component {
   constructor(props) {
     super(props);
     this.toggleNavbar = this.toggleNavbar.bind(this);
@@ -45,4 +45,4 @@ class Nav extends Component {
     );
   }
 }
-export default Nav;
+export default Header;
