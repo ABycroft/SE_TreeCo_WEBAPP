@@ -3,6 +3,10 @@
     padding: 10em;
 }
 
+body{
+    background-color: #5cdb95;
+}
+
 h2 {
     font-size: 1.7em;
     color: #878787;

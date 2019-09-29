@@ -1,11 +1,13 @@
 .App {
   text-align: center;
+  background-color:#f6f6f2;
 }
 
 * {
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   margin: 0;
   padding: 0;
+  font-family: 'Montserrat';
 }
 /*
 .App-header {
@@ -20,6 +22,11 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.tree-col{
+  /* margin:auto;  UNCOMMENT THIS IF WE WANT THE TREES CENTERED*/
+  margin-bottom: 30px;
 }
 
 @keyframes App-logo-spin {

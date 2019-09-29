@@ -5,9 +5,10 @@ header {
 
 .title-bar {
     width: inherit;
-    background-color: #138b53;
-    height: 60px;
+    background-color: #5cdb95;
+    height: 50px;
     padding: 5px;
+    text-align: left;
 }
 
 .logo {
@@ -16,36 +17,38 @@ header {
     height: 100px;
 }
 
-li {
-    padding: 10px;
-    height: 100%;
+.navbar {
+    background-color: #5cdb95;
+    box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.20);
+    padding-left: 10%;
+    padding-right: 00px;
 }
 
-li:hover {
-    background-color: #0e663d
+.navbar-brand{
+    color: #05386b !important;
+    font-weight: bold;
+    font-size: 25px !important;
+    padding-left: 10px;
+    padding-bottom: 7px !important;
+    font-family: 'Montserrat'
+}
+
+.nav {
+    font-size: 19px;
+    padding: 5px;
+    font-weight: bold;
+    font-family: 'Montserrat'
 }
 
 li>a {
     text-decoration: none;
-    color: #ffffff;
+    color: #fdfcfc;
+    padding: 0 15px 0 0;
 }
-
+li>a.active{
+    color: #05386b;
+}
 li>a:hover {
     text-decoration: none;
-    color: #d4d4d4;
-}
-
-ul {
-    display: flex;
-    list-style: none;
-}
-
-.right {
-    float: right;
-}
-
-.top-bar-menu {
-    background-color: aqua;
-    float: right;
-    text-decoration: none;
+    color: #ebebeb;
 }
