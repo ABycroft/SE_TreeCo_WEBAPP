@@ -9,11 +9,6 @@ import './store.css';
  */
 class Store extends Component {
     render() {
-        window.onload = function() {
-            document.getElementById("store").classList.add('active');
-            document.getElementById('home').classList.remove('active');
-            document.getElementById('cart').classList.remove('active');
-        }
         return (
             <div className="title">
                 <h2 style={{ color: "#05386b" }}>Tree Products</h2>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './header.css'
 
 class Header extends Component {
@@ -22,21 +22,21 @@ class Header extends Component {
     return (
       <nav className="navbar navbar-light navbar-expand-md bg-faded justify-content-center">
         <div className="container">
-        <img src={require('../treeicon.png')} alt="Tree icon" height="35" width="33" />
-        <a href="/" className="navbar-brand d-flex w-50 mr-auto">tree co.</a>
+        <img src={require('../treeicon.png')} alt="TreeIcon" className="logo"/>
+        <NavLink exact={true} to="/" className="navbar-brand d-flex w-50 mr-auto">tree co.</NavLink>
           <button onClick={this.toggleNavbar} className={`${classTwo}`} type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon" />
           </button>
           <div className={`${classOne}`} id="navbarResponsive">
           <ul className="nav navbar-nav ml-auto w-100 justify-content-end">
           <li className="nav-item">
-                <a className="" href="/" id="home">Home</a>
+                <NavLink exact={true} activeClassName="active" to="/" id="home">Home</NavLink>
               </li>
               <li className="nav-item">
-                <a className="" href="/store" id="store">Store</a>
+                <NavLink activeClassName="active" to="/store" id="store">Store</NavLink>
               </li>
               <li className="nav-item">
-                <a className="" href="/cart" id="cart">Cart</a>
+                <NavLink activeClassName="active" to="/cart" id="cart">Cart</NavLink>
               </li>
             </ul>
           </div>

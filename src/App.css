@@ -3,12 +3,7 @@
   background-color:#f6f6f2;
 }
 
-* {
-  /* box-sizing: border-box; */
-  margin: 0;
-  padding: 0;
-  font-family: 'Montserrat';
-}
+
 /*
 .App-header {
   background-color: #282c34;
@@ -27,13 +22,4 @@
 .tree-col{
   /* margin:auto;  UNCOMMENT THIS IF WE WANT THE TREES CENTERED*/
   margin-bottom: 30px;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
