@@ -23,3 +23,42 @@
   /* margin:auto;  UNCOMMENT THIS IF WE WANT THE TREES CENTERED*/
   margin-bottom: 30px;
 }
+.btn-black{
+  background:transparent;
+  text-transform: capitalize;
+  font-size: 0.8rem !important;
+  border-radius: 0 !important;
+  border: 0.1rem solid !important;
+}
+.btn-remove{
+  background:transparent;
+  text-transform: capitalize;
+  font-size: 0.8rem !important;
+  border-radius: 0 !important;
+  border: 0.1rem solid !important;
+}
+.btn-remove:hover{
+  background-color: darkred;
+  cursor: pointer;
+}
+.btn-add{
+  background:transparent;
+  text-transform: capitalize;
+  font-size: 0.8rem !important;
+  border-radius: 0 !important;
+  border: 0.1rem solid !important;
+}
+.btn-add:hover{
+  background-color: green;
+  cursor: pointer;
+}
+.cart-remove{
+  background:transparent;
+  text-transform: capitalize;
+  font-size: 1rem !important;
+  border-radius: 0 !important;
+  border: 0.1rem solid !important;
+}
+.cart-remove:hover{
+  cursor: pointer;
+}

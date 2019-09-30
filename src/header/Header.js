@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { Link, NavLink } from 'react-router-dom';
-import './header.css'
+import { Link, NavLink }} from 'react-router-dom';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import './header.css';
 
 class Header extends Component {
   constructor(props) {
