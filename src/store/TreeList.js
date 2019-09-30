@@ -16,7 +16,7 @@ class TreeList extends Component {
                         {value => {
                             //console.log(value)
                             return value.products.map( product =>{
-                                return <Tree key={product.id} product={product}/>
+                                return <Tree key={product.id} product={product} addToCart={this.props.addToCart}/>
                             })
                         }}
                     </TreesConsumer>
