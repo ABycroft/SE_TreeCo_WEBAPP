@@ -74,7 +74,7 @@ class TreesProvider extends Component {
         const index = tempCart.indexOf(selectedProduct);
         const product = tempCart[index];
 
-        if(product.quantity === 1){
+        if(product.quantity === 0){
             this.removeItem(id);
         }else{
             product.quantity--;
