@@ -1,4 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import TreeList from "./TreeList";
+import './store.css';
 
 /**
  * This is a page component.
@@ -8,8 +10,9 @@ import React, { Component } from 'react'
 class Store extends Component {
     render() {
         return (
-            <div>
-                <h2>Store Page</h2>
+            <div className="title">
+                <h2 style={{ color: "#05386b" }}>Tree Products</h2>
+                <TreeList />
             </div>
         )
     }

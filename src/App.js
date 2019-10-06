@@ -4,6 +4,9 @@ import './App.css';
 import Header from "./header/Header"
 import Store from './store/Store';
 import Home from './home/Home';
+import ClickedTree from './clickedTree/clickedTree';
+import Cart from './cart/';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 /**
  * App.js is the starting point for the React App. 
@@ -17,6 +20,8 @@ function App() {
                 <div className="container">
                     <Route exact path = "/" component={Home}/>
                     <Route path = "/store" component={Store}/>
+                    <Route path = "/details" component={ClickedTree}/>
+                    <Route path = "/cart" component={Cart}/>
                 </div>
             </Router>
         </div>
