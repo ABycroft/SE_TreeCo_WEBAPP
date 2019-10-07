@@ -10,7 +10,9 @@ class TreesProvider extends Component {
         products: [],
         cart: [],
         clickedTree: clickedTree,
-        cartTotal: 0
+        cartTotal: 0,
+        orderedByPriceLowtoHigh: false,
+        orderedByNameLowtoHigh: false,
     };
     componentDidMount(){
         this.setProducts();
@@ -26,6 +28,59 @@ class TreesProvider extends Component {
             return{products: tempProducts}
         })
         
+    };
+
+    sortByPrice = () =>{
+        // called in add to cart onClick
+
+        let tempProducts = [...this.state.products];
+
+        if(this.state.orderedByPriceLowtoHigh){
+            tempProducts.sort((a, b) => b.price - a.price)
+        }else{
+            tempProducts.sort((a, b) => a.price - b.price)
+        }
+
+        this.setState(
+            ()=>{
+                return {
+                    products: tempProducts,
+                    orderedByPriceLowtoHigh: !this.state.orderedByPriceLowtoHigh
+                }
+            }
+        );
+    };
+    sortByName = () =>{
+        // not called atm
+        
+        let tempProducts = [...this.state.products];
+        console.log(tempProducts);
+
+        if(this.state.orderedByNameLowtoHigh){
+            tempProducts.sort((a, b) => {
+                if(a.name < b.name) { return -1; }
+                if(a.name > b.name) { return 1; }
+                return 0;
+            })
+        }else{
+            tempProducts.sort((a, b) => {
+                if(a.name > b.name) { return -1; }
+                if(a.name < b.name) { return 1; }
+                return 0;
+            })
+        }
+
+        console.log(tempProducts);
+        console.log("done");
+        
+        this.setState(
+            ()=>{
+                return {
+                    products: tempProducts,
+                    orderedByNameLowtoHigh: !this.state.orderedByNameLowtoHigh
+                }
+            }
+        );
     };
 
     getTree = id =>{
@@ -129,7 +184,8 @@ class TreesProvider extends Component {
                 increment: this.increment,
                 decrement: this.decrement,
                 removeItem: this.removeItem,
-                emptyCart: this.emptyCart
+                emptyCart: this.emptyCart,
+                sortByPrice: this.sortByPrice
             }}>
                 {this.props.children}
             </TreesContext.Provider>

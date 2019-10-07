@@ -35,6 +35,7 @@ export default class Tree extends Component {
                                 <Button disabled={inCart?true:false} style={{backgroundColor:"#60DA99",color:"#ffffff"}}  variant="light" onClick={() =>{
                                     // onClick
                                     value.addToCart(id);
+                                    value.sortByPrice();
                                 }}>
                                     {inCart?(<p className="test-capitalize mb-0">In Cart</p>):(<p className="test-capitalize mb-0">Add to Cart</p>)}
                                 </Button>
