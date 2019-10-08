@@ -8,14 +8,14 @@ export default function CartTotals({value}) {
             <div className="row">
                 <div className="col-10 mt-2 ml-sm-5 ml-md-auto col-sm-8
                 text-capitalise text-right">
-                     <Link to="/">
-                         <button className="btn btn-outline-danger 
-                         test-uppercase mb-3 px-5"
-                         type="button"
-                         onClick={()=>emptyCart()}>
-                             Clear Cart
-                         </button>
-                     </Link>
+                     
+                    <button className="btn btn-outline-danger 
+                    test-uppercase mb-3 px-5"
+                    type="button"
+                    onClick={()=>emptyCart()}>
+                        Clear Cart
+                    </button>
+                     
                      <h3>
                          Total : ${cartTotal}
                      </h3>

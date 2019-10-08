@@ -5,7 +5,12 @@ export const treesData = [
         img: "trees/birch_tree.png",
         price: 1200,
         inCart: false,
-        quantity: 0
+        quantity: 0,
+        category: "Deciduous",
+        soil: "moist",
+        sun: "Semi shade",
+        maxHeight: "13m",
+        about: "Placeholder text for more information about the tree"
     },
     {
         id: 2,
@@ -13,7 +18,12 @@ export const treesData = [
         img: "trees/fir_tree.jpg",
         price: 1350,
         inCart: false,
-        quantity: 0
+        quantity: 0,
+        category: "Evergreen",
+        soil: "moderate",
+        sun: "Semi shade",
+        maxHeight: "15m",
+        about: "Some quick example text to build on the card title and make up the bulk of the card's content."
     },
     {
         id: 3,
@@ -21,7 +31,12 @@ export const treesData = [
         img: "trees/kauri_tree.jpg",
         price: 1980,
         inCart: false,
-        quantity: 0
+        quantity: 0,
+        category: "NZ Native",
+        soil: "moderate",
+        sun: "Full sun",
+        maxHeight: "60m",
+        about: "Some quick example text to build on the card title and make up the bulk of the card's content."
     },
     {
         id: 4,
@@ -29,7 +44,12 @@ export const treesData = [
         img: "trees/oak_tree.jpg",
         price: 1250,
         inCart: false,
-        quantity: 0
+        quantity: 0,
+        category: "Deciduous",
+        soil: "moist",
+        sun: "Full sun",
+        maxHeight: "25m",
+        about: "Some quick example text to build on the card title and make up the bulk of the card's content."
     },
     {
         id: 5,
@@ -37,7 +57,90 @@ export const treesData = [
         img: "trees/pohutukawa_tree.jpg",
         price: 1700,
         inCart: false,
-        quantity: 0
+        quantity: 0,
+        category: "NZ Native",
+        soil: "moderate",
+        sun: "Semi shade",
+        maxHeight: "20m",
+        about: "Some quick example text to build on the card title and make up the bulk of the card's content."
+    },
+    {
+        id: 6,
+        name: "Pin Oak",
+        img: "https://www.theplantstore.co.nz/files/15704_20140919121411-1411085651_postcard.jpg",
+        price: 1045,
+        inCart: false,
+        quantity: 0,
+        category: "Deciduous",
+        soil: "moist",
+        sun: "Moderate Sun",
+        maxHeight: "10",
+        about: "Some quick example text to build on the card title and make up the bulk of the card's content."
+    },
+    {
+        id: 6,
+        name: "Verdale Olive",
+        img: "https://greenleafnurseries.co.nz/wp-content/uploads/2013/06/olive-verdale-500.jpg",
+        price: 1700,
+        inCart: false,
+        quantity: 0,
+        category: "Evergreen",
+        soil: "moist",
+        sun: "Full sun",
+        maxHeight: "5",
+        about: "Some quick example text to build on the card title and make up the bulk of the card's content."
+    },
+    {
+        id: 7,
+        name: "Henkel Yellowwood",
+        img: "https://www.icontrees.co.nz/ic/2859129367/Podocarpus%20Henkelii%20tree.JPG",
+        price: 1700,
+        inCart: false,
+        quantity: 0,
+        category: "Evergreen",
+        soil: "moist",
+        sun: "Moderate sun",
+        maxHeight: "8",
+        about: "Some quick example text to build on the card title and make up the bulk of the card's content."
+    },
+    {
+        id: 8,
+        name: "Japanese Maple",
+        img: "http://cdn.shopify.com/s/files/1/0059/8835/2052/products/Red-Dragon-Japanese-Maple-50w_grande.jpg?v=1549677963",
+        price: 1700,
+        inCart: false,
+        quantity: 0,
+        category: "Deciduous",
+        soil: "moderate",
+        sun: "Semi shade",
+        maxHeight: "5",
+        about: "Some quick example text to build on the card title and make up the bulk of the card's content."
+    },
+    {
+        id: 9,
+        name: "Japanese Cherry",
+        img: "https://images-na.ssl-images-amazon.com/images/I/61S%2BLF61WSL._SX466_.jpg",
+        price: 1700,
+        inCart: false,
+        quantity: 0,
+        category: "Deciduous",
+        soil: "moist",
+        sun: "Full sun",
+        maxHeight: "6",
+        about: "Some quick example text to build on the card title and make up the bulk of the card's content."
+    },
+    {
+        id: 10,
+        name: "Kowhai",
+        img: "https://www.pncc.govt.nz/media/3130006/kowhai.jpg?anchor=center&mode=crop&width=1920&height=1080&rnd=131986076970000000&center=0.5,0.5",
+        price: 1700,
+        inCart: false,
+        quantity: 0,
+        category: "NZ Native",
+        soil: "drained",
+        sun: "Semi shade",
+        maxHeight: "8",
+        about: "Some quick example text to build on the card title and make up the bulk of the card's content."
     }
 ];
 
@@ -47,5 +150,10 @@ export const clickedTree = {
         img: "trees/birch_tree.png",
         price: 1200,
         inCart: false,
-        quantity: 0
+        quantity: 0,
+        category: "NZ Native",
+        soil: "drained",
+        sun: "Semi shade",
+        maxHeight: "",
+        about: "Some quick example text to build on the card title and make up the bulk of the card's content."
 }
