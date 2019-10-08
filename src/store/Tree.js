@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { TreesConsumer } from '../context';
-import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Button'
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 import './tree.css';
 
 export default class Tree extends Component {
