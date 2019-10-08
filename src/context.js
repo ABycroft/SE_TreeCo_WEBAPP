@@ -185,7 +185,8 @@ class TreesProvider extends Component {
                 decrement: this.decrement,
                 removeItem: this.removeItem,
                 emptyCart: this.emptyCart,
-                sortByPrice: this.sortByPrice
+                sortByPrice: this.sortByPrice,
+                sortByName: this.sortByName
             }}>
                 {this.props.children}
             </TreesContext.Provider>
