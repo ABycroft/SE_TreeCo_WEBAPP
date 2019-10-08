@@ -8,7 +8,7 @@ import './tree.css';
 
 export default class Tree extends Component {
     render() {
-        const {id, name, img, price, inCart} = this.props.product;
+        const {id, name, img, price, inCart, about} = this.props.product;
         return (
             <ProductWrapper>
                 <TreesConsumer>
@@ -22,10 +22,7 @@ export default class Tree extends Component {
                             </Link>
                             <Card.Body>
                                 <Card.Title className="cardTitle">{name}</Card.Title>
-                                <p>
-                                    Some quick example text to build on the card title and make up the bulk of
-                                    the card's content.
-                                </p>
+                                
                                 <p>
                                     ${price}
                                 </p>

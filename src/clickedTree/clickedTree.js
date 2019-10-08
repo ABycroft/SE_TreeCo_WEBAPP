@@ -8,7 +8,7 @@ export default class clickedTree extends Component {
         return (
           <TreesConsumer>
             {value => {
-              const {id, name, img, price, inCart} = value.clickedTree;
+              const {id, name, img, price, inCart, about} = value.clickedTree;
               return (
                 <div className="container py-5">
                   <div className='row'>
@@ -25,7 +25,7 @@ export default class clickedTree extends Component {
                     <div className="col-10 mx-auto col-md-6 my-3">
                       <h2>${price}</h2>
                       <p>
-                        details about product
+                        {about}
                       </p>
   
                       <Link to="/store">
