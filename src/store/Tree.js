@@ -6,9 +6,6 @@ import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import './tree.css';
 
-
-// https://youtu.be/wPQ1-33teR4?t=7714
-
 export default class Tree extends Component {
     render() {
         const {id, name, img, price, inCart} = this.props.product;
@@ -41,7 +38,6 @@ export default class Tree extends Component {
                             </Card.Body>
                         </Card> 
                     )}
-                  
                 </TreesConsumer>
             </ProductWrapper>
         )

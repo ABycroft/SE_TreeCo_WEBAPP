@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import TreeList from "./TreeList";
 import './store.css';
+import { TreesConsumer } from '../context';
 
 /**
  * This is a page component.
@@ -12,6 +13,14 @@ class Store extends Component {
         return (
             <div className="title">
                 <h2 style={{ color: "#05386b" }}>Tree Products</h2>
+                <TreesConsumer>
+                    {(value) => (
+                        <div className="text-right">
+                            <button className="btn mx-1" onClick={value.sortByPrice} style={{backgroundColor:"#60DA99",color:"#ffffff"}} variant="light">Sort by Price</button>
+                            <button className="btn mx-1" onClick={value.sortByName} style={{backgroundColor:"#60DA99",color:"#ffffff"}} variant="light">Sort by Name</button>
+                        </div>
+                    )}
+                </TreesConsumer>
                 <TreeList />
             </div>
         )
