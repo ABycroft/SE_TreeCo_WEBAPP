@@ -17,12 +17,14 @@ function App() {
         <div className="App"> 
             <Router>
                 <Header/>
+                <body>
                 <div className="container">
                     <Route exact path = "/" component={Home}/>
                     <Route path = "/store" component={Store}/>
                     <Route path = "/details" component={ClickedTree}/>
                     <Route path = "/cart" component={Cart}/>
                 </div>
+                </body>
             </Router>
         </div>
     );
