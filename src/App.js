@@ -19,6 +19,7 @@ function App() {
         <div className="App"> 
             <Router>
                 <Header/>
+                <body>
                 <div className="container">
                     <Route exact path = "/" component={Home}/>
                     <Route path = "/store" component={Store}/>
@@ -27,6 +28,7 @@ function App() {
                     <Route path = "/payment" component={Purchase}/>
                     <Route path = "/success" component={PaymentSuccess}/>
                 </div>
+                </body>
             </Router>
         </div>
     );

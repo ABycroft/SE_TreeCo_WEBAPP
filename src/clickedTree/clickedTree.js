@@ -29,13 +29,13 @@ export default class clickedTree extends Component {
                       </p>
   
                       <Link to="/store">
-                        <Button style={{backgroundColor:"#60DA99",color:"#ffffff"}}  variant="light">
+                        <Button variant="light">
                           Back To Store
                         </Button>
                       </Link>
                       <Button onClick={()=>{
                         value.addToCart(id);
-                      }} disabled={inCart?true:false} style={{backgroundColor:"#60DA99",color:"#ffffff"}}  variant="light">
+                      }} disabled={inCart?true:false} variant="light">
                         {inCart?(<p className="test-capitalize mb-0">In Cart</p>):(<p className="test-capitalize mb-0">Add to Cart</p>)}
                       </Button>
                     </div>

@@ -8,6 +8,10 @@ h2 {
   color: #05386b;
 }
 
+body{
+  background-color:#f6f6f2 !important;
+}
+
 /*
 .App-header {
   background-color: #282c34;
@@ -27,6 +31,12 @@ h2 {
   /* margin:auto;  UNCOMMENT THIS IF WE WANT THE TREES CENTERED*/
   margin-bottom: 30px;
 }
+
+.btn{
+  background-color: #60DA99 !important; 
+  color: #ffffff !important;
+}
+
 .btn-black{
   background:transparent;
   text-transform: capitalize;
