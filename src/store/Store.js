@@ -16,8 +16,8 @@ class Store extends Component {
                 <TreesConsumer>
                     {(value) => (
                         <div className="text-right">
-                            <button className="btn mx-1" onClick={value.sortByPrice} variant="light">Sort by Price</button>
-                            <button className="btn mx-1" onClick={value.sortByName} variant="light">Sort by Name</button>
+                            <button className="btn btn-green mx-1" onClick={value.sortByPrice} variant="light">Sort by Price</button>
+                            <button className="btn btn-green mx-1" onClick={value.sortByName} variant="light">Sort by Name</button>
                         </div>
                     )}
                 </TreesConsumer>

@@ -58,7 +58,7 @@ class Home extends Component {
                     </Carousel.Item>
                 </Carousel><p className="pt-3"> We offer pick up and delivery!</p>
                 <Link to="/store" >
-                    <button className="btn mx-1 mb-4" variant="light">Start Shopping!</button>
+                    <button className="btn btn-green mx-1 mb-4 " variant="light">Start Shopping!</button>
                 </Link>
             </div >
         )

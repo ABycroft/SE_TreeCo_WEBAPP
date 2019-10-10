@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import "./cart.css";
 
 
 export default function CartTotals({value}) {
@@ -19,7 +18,7 @@ export default function CartTotals({value}) {
                     </button>
                     <br></br>
                     <Link to="/payment">
-                        <button className="btn purchase"
+                        <button className="btn btn-green mb-3 px-5"
                             type="button"
                             variant="light">
                                 Purchase

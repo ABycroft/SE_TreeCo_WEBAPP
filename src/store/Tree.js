@@ -26,7 +26,7 @@ export default class Tree extends Component {
                                 <p>
                                     ${price}
                                 </p>
-                                <Button disabled={inCart?true:false} variant="light" onClick={() =>{
+                                <Button className="btn-green" disabled={inCart?true:false} variant="light" onClick={() =>{
                                     // onClick
                                     value.addToCart(id);
                                 }}>
