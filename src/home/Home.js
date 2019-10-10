@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './home.css';
-import ImageGallery from './ImageGallery'
 import { Carousel } from 'react-bootstrap'
 
 /**
@@ -30,7 +29,7 @@ class Home extends Component {
                         <img
                             className="d-block imgs"
                             src="http://cdn.shopify.com/s/files/1/0059/8835/2052/products/Red-Dragon-Japanese-Maple-50w_grande.jpg?v=1549677963"
-                            alt="Third slide"
+                            alt="Second slide"
                         />
 
                         <Carousel.Caption>
@@ -51,7 +50,7 @@ class Home extends Component {
                         <img
                             className="d-block imgs"
                             src="trees/oak_tree.jpg"
-                            alt="Third slide"
+                            alt="Fourth slide"
                         />
                         <Carousel.Caption>
                             <h4>Plan for the future</h4>
@@ -59,8 +58,7 @@ class Home extends Component {
                     </Carousel.Item>
                 </Carousel><p className="pt-3"> We offer pick up and delivery!</p>
                 <Link to="/store" >
-                    {/* <div className='btn mx-1'>Start Shopping!</div> */}
-                    <button className="btn mx-1 mb-4" style={{ backgroundColor: "#60DA99", color: "#ffffff" }} variant="light">Start Shopping!</button>
+                    <button className="btn mx-1 mb-4" variant="light">Start Shopping!</button>
                 </Link>
             </div >
         )

@@ -9,7 +9,7 @@ h2 {
 }
 
 body{
-  background-color:#f6f6f2;
+  background-color:#f6f6f2 !important;
 }
 
 /*
@@ -31,6 +31,12 @@ body{
   /* margin:auto;  UNCOMMENT THIS IF WE WANT THE TREES CENTERED*/
   margin-bottom: 30px;
 }
+
+.btn{
+  background-color: #60DA99 !important; 
+  color: #ffffff !important;
+}
+
 .btn-black{
   background:transparent;
   text-transform: capitalize;
