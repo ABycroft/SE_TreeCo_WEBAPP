@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import { withRouter} from 'react-router-dom';
 import './payment.css';
 
-export default class Payment extends Component {
+class Payment extends Component {
     onSubmit = e => {
-        
+        this.props.history.push(`/success/`);
     };
     
     render() {
@@ -35,3 +36,4 @@ export default class Payment extends Component {
         )
     }
 }
+export default withRouter(Payment);
