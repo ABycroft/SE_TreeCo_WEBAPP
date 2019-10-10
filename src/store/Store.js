@@ -12,7 +12,7 @@ class Store extends Component {
     render() {
         return (
             <div className="title">
-                <h2 style={{ color: "#05386b" }}>Tree Products</h2>
+                <h2>Tree Products</h2>
                 <TreesConsumer>
                     {(value) => (
                         <div className="text-right">
