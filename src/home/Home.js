@@ -45,7 +45,7 @@ class Home extends Component {
                         <Carousel.Caption>
                             <h4>Brighten up your garden!</h4>
                         </Carousel.Caption>
-                    </Carousel.Item> 
+                    </Carousel.Item>
                     <Carousel.Item>
                         <img
                             className="d-block imgs"
