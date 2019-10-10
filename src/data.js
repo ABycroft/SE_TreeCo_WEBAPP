@@ -78,7 +78,7 @@ export const treesData = [
         about: "Some quick example text to build on the card title and make up the bulk of the card's content."
     },
     {
-        id: 6,
+        id: 7,
         name: "Verdale Olive",
         img: "https://greenleafnurseries.co.nz/wp-content/uploads/2013/06/olive-verdale-500.jpg",
         price: 1700,
@@ -91,7 +91,7 @@ export const treesData = [
         about: "Some quick example text to build on the card title and make up the bulk of the card's content."
     },
     {
-        id: 7,
+        id: 8,
         name: "Henkel Yellowwood",
         img: "https://www.icontrees.co.nz/ic/2859129367/Podocarpus%20Henkelii%20tree.JPG",
         price: 1700,
@@ -104,7 +104,7 @@ export const treesData = [
         about: "Some quick example text to build on the card title and make up the bulk of the card's content."
     },
     {
-        id: 8,
+        id: 9,
         name: "Japanese Maple",
         img: "http://cdn.shopify.com/s/files/1/0059/8835/2052/products/Red-Dragon-Japanese-Maple-50w_grande.jpg?v=1549677963",
         price: 1700,
@@ -117,7 +117,7 @@ export const treesData = [
         about: "Some quick example text to build on the card title and make up the bulk of the card's content."
     },
     {
-        id: 9,
+        id: 10,
         name: "Japanese Cherry",
         img: "https://images-na.ssl-images-amazon.com/images/I/61S%2BLF61WSL._SX466_.jpg",
         price: 1700,
@@ -130,7 +130,7 @@ export const treesData = [
         about: "Some quick example text to build on the card title and make up the bulk of the card's content."
     },
     {
-        id: 10,
+        id: 11,
         name: "Kowhai",
         img: "https://www.pncc.govt.nz/media/3130006/kowhai.jpg?anchor=center&mode=crop&width=1920&height=1080&rnd=131986076970000000&center=0.5,0.5",
         price: 1700,

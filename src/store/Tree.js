@@ -8,7 +8,7 @@ import './tree.css';
 
 export default class Tree extends Component {
     render() {
-        const {id, name, img, price, inCart, about} = this.props.product;
+        const { id, name, img, price, inCart } = this.props.product;
         return (
             <ProductWrapper>
                 <TreesConsumer>

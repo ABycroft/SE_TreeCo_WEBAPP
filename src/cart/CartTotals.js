@@ -1,5 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import "./cart.css";
+
 
 export default function CartTotals({value}) {
     const {cartTotal, emptyCart} = value;
@@ -10,12 +12,20 @@ export default function CartTotals({value}) {
                 text-capitalise text-right">
                      
                     <button className="btn btn-outline-danger 
-                    test-uppercase mb-3 px-5"
-                    type="button"
-                    onClick={()=>emptyCart()}>
-                        Clear Cart
+                        test-uppercase mb-3 px-5"
+                        type="button"
+                        onClick={()=>emptyCart()}>
+                            Clear Cart
                     </button>
-                     
+                    <br></br>
+                    <Link to="/payment">
+                        <button className="btn purchase"
+                            type="button"
+                            variant="light">
+                                Purchase
+                        </button>
+                    </Link>
+                    <br></br><br></br>
                      <h3>
                          Total : ${cartTotal}
                      </h3>
