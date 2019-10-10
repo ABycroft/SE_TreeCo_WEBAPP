@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color:#f6f6f2;
+  background-color: #f6f6f2;
 }
 
 h2 {
@@ -8,61 +8,78 @@ h2 {
   color: #05386b;
 }
 
-/*
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}*/
+body {
+  background-color: #f6f6f2 !important;
+}
 
 .App-link {
   color: #61dafb;
 }
 
-.tree-col{
+.tree-col {
   /* margin:auto;  UNCOMMENT THIS IF WE WANT THE TREES CENTERED*/
   margin-bottom: 30px;
 }
-.btn-black{
-  background:transparent;
+
+.btn {
+  outline: none !important;
+  box-shadow: 0 0 0 0 !important;
+}
+
+.btn-green {
+  background-color: #60DA99 !important;
+  color: #f6f6f2 !important;
+}
+
+.btn-green:hover:enabled {
+  background-color: #f6f6f2 !important;
+  color: #60DA99 !important;
+  border-color: #60DA99 !important;
+}
+
+.btn-black {
+  background: transparent;
   text-transform: capitalize;
   font-size: 0.8rem !important;
   border-radius: 0 !important;
   border: 0.1rem solid !important;
 }
-.btn-remove{
-  background:transparent;
+
+.btn-remove {
+  background: transparent;
   text-transform: capitalize;
   font-size: 0.8rem !important;
   border-radius: 0 !important;
   border: 0.1rem solid !important;
 }
-.btn-remove:hover{
-  background-color: darkred;
+
+.btn-remove:hover {
+  background-color: #dc3545 !important;
   cursor: pointer;
 }
-.btn-add{
-  background:transparent;
+
+.btn-add {
+  background: transparent;
   text-transform: capitalize;
   font-size: 0.8rem !important;
   border-radius: 0 !important;
   border: 0.1rem solid !important;
 }
-.btn-add:hover{
-  background-color: green;
+
+.btn-add:hover {
+  background-color: #0bac5b !important;
   cursor: pointer;
 }
-.cart-remove{
-  background:transparent;
+
+.cart-remove {
+  background: transparent;
   text-transform: capitalize;
   font-size: 1rem !important;
   border-radius: 0 !important;
   border: 0.1rem solid !important;
+  text-align: center;
 }
-.cart-remove:hover{
+
+.cart-remove:hover {
   cursor: pointer;
 }

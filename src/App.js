@@ -17,17 +17,17 @@ import "bootstrap/dist/css/bootstrap.min.css";
  */
 function App() {
     return (
-        <div className="App"> 
+        <div className="App">
             <Router>
-                <Header/>
+                <Header />
                 <div className="container">
-                    <Route exact path = "/" component={Home}/>
-                    <Route path = "/store" component={Store}/>
-                    <Route path = "/details" component={ClickedTree}/>
-                    <Route path = "/cart" component={Cart}/>
-                    <Route path = "/payment" component={Purchase}/>
-                    <Route path = "/success" component={PaymentSuccess}/>
-                    <Route path = "/toolstore" component={ToolStore}/>
+                    <Route exact path="/" component={Home} />
+                    <Route path="/store" component={Store} />
+                    <Route path="/details" component={ClickedTree} />
+                    <Route path="/cart" component={Cart} />
+                    <Route path="/payment" component={Purchase} />
+                    <Route path="/success" component={PaymentSuccess} />
+                    <Route path="/toolstore" component={ToolStore} />
                 </div>
             </Router>
         </div>

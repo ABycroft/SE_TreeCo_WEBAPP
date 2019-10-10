@@ -13,27 +13,26 @@ export default class Tree extends Component {
             <ProductWrapper>
                 <TreesConsumer>
                     {(value) => (
-                        <Card  className="cardParent">
+                        <Card className="cardParent">
                             <Link to="/details">
-                                <Card.Img  width="300px" height="200px" variant="top" src={img} alt="tree" className="card-img-top mb-1" onClick={() =>{
+                                <Card.Img width="300px" height="200px" variant="top" src={img} alt="tree" className="card-img-top mb-1" onClick={() => {
                                     //onClick
                                     value.handleClickedTree(id)
-                                }}/>
+                                }} />
                             </Link>
                             <Card.Body>
                                 <Card.Title className="cardTitle">{name}</Card.Title>
-                                
                                 <p>
                                     ${price}
                                 </p>
-                                <Button disabled={inCart?true:false} style={{backgroundColor:"#60DA99",color:"#ffffff"}}  variant="light" onClick={() =>{
+                                <Button className="btn-green" disabled={inCart ? true : false} variant="light" onClick={() => {
                                     // onClick
                                     value.addToCart(id);
                                 }}>
-                                    {inCart?(<p className="test-capitalize mb-0">In Cart</p>):(<p className="test-capitalize mb-0">Add to Cart</p>)}
+                                    {inCart ? (<p className="test-capitalize mb-0">In Cart</p>) : (<p className="test-capitalize mb-0">Add to Cart</p>)}
                                 </Button>
                             </Card.Body>
-                        </Card> 
+                        </Card>
                     )}
                 </TreesConsumer>
             </ProductWrapper>
