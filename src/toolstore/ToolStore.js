@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import TreeList from "./TreeList";
-import './store.css';
+import ToolList from "./ToolList";
+import './toolstore.css';
 import { TreesConsumer } from '../context';
 
 /**
@@ -12,16 +12,16 @@ class Store extends Component {
     render() {
         return (
             <div className="title">
-                <h2 style={{ color: "#05386b" }}>Tree Products</h2>
+                <h2 style={{ color: "#05386b" }}>Tool Products</h2>
                 <TreesConsumer>
                     {(value) => (
                         <div className="text-right">
-                            <button className="btn btn-green mx-1" onClick={value.sortByPrice} variant="light">Sort by Price</button>
-                            <button className="btn btn-green mx-1" onClick={value.sortByName} variant="light">Sort by Name</button>
+                            <button className="btn mx-1" onClick={value.sortToolsByPrice} style={{backgroundColor:"#60DA99",color:"#ffffff"}} variant="light">Sort by Price</button>
+                            <button className="btn mx-1" onClick={value.sortToolsByName} style={{backgroundColor:"#60DA99",color:"#ffffff"}} variant="light">Sort by Name</button>
                         </div>
                     )}
                 </TreesConsumer>
-                <TreeList />
+                <ToolList />
             </div>
         )
     }
