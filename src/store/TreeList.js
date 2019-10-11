@@ -7,17 +7,21 @@ import { TreesConsumer } from "../context";
 
 class TreeList extends Component {
     render() {
+        //console.log(this.state.trees);
         return (
             <div className="container py-5">
+
                 <div className="row">
                     <TreesConsumer>
+
                         {value => {
-                            return value.products.map(product => {
-                                return <div className="col-md-3 tree-col" key={product.id}>
-                                    <Tree product={product} addToCart={this.props.addToCart} />
-                                </div>
+                            //console.log(value)
+                         return value.products.map( product =>{
+                                return <div className="col-md-3 tree-col" key={product.id}><Tree product={product} addToCart={this.props.addToCart}/></div>
+
                             })
                         }}
+
                     </TreesConsumer>
                 </div>
             </div>

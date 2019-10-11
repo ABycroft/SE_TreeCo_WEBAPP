@@ -2,38 +2,46 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { TreesConsumer } from '../context';
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card'
+import Button from 'react-bootstrap/Button'
 import './tree.css';
+
+
+// https://youtu.be/wPQ1-33teR4?t=7714
 
 export default class Tree extends Component {
     render() {
-        const { id, name, img, price, inCart } = this.props.product;
+        const {id, name, img, price, inCart} = this.props.product;
         return (
             <ProductWrapper>
                 <TreesConsumer>
                     {(value) => (
-                        <Card className="cardParent">
+                        <Card  className="cardParent">
                             <Link to="/details">
-                                <Card.Img width="300px" height="200px" variant="top" src={img} alt="tree" className="card-img-top mb-1" onClick={() => {
+                                <Card.Img  width="300px" height="200px" variant="top" src={img} alt="tree" className="card-img-top mb-1" onClick={() =>{
                                     //onClick
                                     value.handleClickedTree(id)
-                                }} />
+                                }}/>
                             </Link>
                             <Card.Body>
                                 <Card.Title className="cardTitle">{name}</Card.Title>
                                 <p>
+                                    Some quick example text to build on the card title and make up the bulk of
+                                    the card's content.
+                                </p>
+                                <p>
                                     ${price}
                                 </p>
-                                <Button className="btn-green" disabled={inCart ? true : false} variant="light" onClick={() => {
+                                <Button disabled={inCart?true:false} style={{backgroundColor:"#60DA99",color:"#ffffff"}}  variant="light" onClick={() =>{
                                     // onClick
                                     value.addToCart(id);
                                 }}>
-                                    {inCart ? (<p className="test-capitalize mb-0">In Cart</p>) : (<p className="test-capitalize mb-0">Add to Cart</p>)}
+                                    {inCart?(<p className="test-capitalize mb-0">In Cart</p>):(<p className="test-capitalize mb-0">Add to Cart</p>)}
                                 </Button>
                             </Card.Body>
-                        </Card>
+                        </Card> 
                     )}
+                  
                 </TreesConsumer>
             </ProductWrapper>
         )
