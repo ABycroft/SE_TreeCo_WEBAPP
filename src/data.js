@@ -144,6 +144,89 @@ export const treesData = [
     }
 ];
 
+export const toolsData = [
+    {
+        id: 12,
+        name: "Spade",
+        img: "https://media.4rgos.it/i/Argos/7529412_R_Z001A?w=750&h=440&qlt=70",
+        price: 20,
+        inCart: false,
+        quantity: 0,
+    },
+    {
+        id: 13,
+        name: "Watering can",
+        img: "https://media.tractorsupply.com/is/image/TractorSupplyCompany/1060800?$456$",
+        price: 25,
+        inCart: false,
+        quantity: 0,
+    },
+    {
+        id: 14,
+        name: "Hose",
+        img: "https://gilmour.com/wp-content/uploads/2018/03/flexogen-heavy-duty-hose-6450-600x600.jpg",
+        price: 30,
+        inCart: false,
+        quantity: 0,
+    },
+    {
+        id: 15,
+        name: "Soil",
+        img: "https://images.homedepot-static.com/productImages/8d51618a-abef-4199-9eb8-c8030f7fd37c/svn/miracle-gro-garden-soil-75030430-64_1000.jpg",
+        price: 16,
+        inCart: false,
+        quantity: 0,
+    },
+    {
+        id: 16,
+        name: "Compost",
+        img: "https://www.kings.co.nz/media/catalog/product/cache/1/thumbnail/600x/17f82f742ffe127f42dca9de82fb58b1/p/r/product_860_20120210_184013.jpg",
+        price: 18,
+        inCart: false,
+        quantity: 0,
+    },
+    {
+        id: 17,
+        name: "Shears",
+        img: "https://cdn.shopify.com/s/files/1/1731/8397/products/Shears_Pruning_Square_2048x@2x.jpg?v=1499762835",
+        price: 29,
+        inCart: false,
+        quantity: 0,
+    },
+    {
+        id: 18,
+        name: "Sprinkler",
+        img: "https://www.therange.co.uk/_m4/4/9/1518598474_6382.jpg",
+        price: 16,
+        inCart: false,
+        quantity: 0,
+    },
+    {
+        id: 19,
+        name: "Fertilizer",
+        img: "https://images.homedepot-static.com/productImages/37fdb432-2c29-4f58-add7-4c5af651cae2/svn/vigoro-granular-fertilizer-52203pm-64_1000.jpg",
+        price: 21,
+        inCart: false,
+        quantity: 0,
+    },
+    {
+        id: 20,
+        name: "Gumboots",
+        img: "https://db1736767dbd5e7094bb-d61bbc5d0b342a54145a236e2d5d1ebf.ssl.cf4.rackcdn.com/Product-190x190/438983df-2ccf-4a04-b9ee-655e3eccfdf8.jpg",
+        price: 35,
+        inCart: false,
+        quantity: 0,
+    },
+    {
+        id: 21,
+        name: "Gloves",
+        img: "https://www.americangloveco.com/wp-content/uploads/2016/09/bbg-2.jpg",
+        price: 13,
+        inCart: false,
+        quantity: 0,
+    }
+];
+
 export const clickedTree = {
     id: 1,
         name: "Birch",

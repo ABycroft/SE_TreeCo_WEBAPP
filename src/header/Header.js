@@ -33,7 +33,10 @@ class Header extends Component {
                 <NavLink exact={true} activeClassName="active" to="/" id="home">Home</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink activeClassName="active" to="/store" id="store">Store</NavLink>
+                <NavLink activeClassName="active" to="/store" id="store">Tree Store</NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink activeClassName="active" to="/toolstore" id="store">Tool Store</NavLink>
               </li>
               <li className="nav-item">
                 <NavLink activeClassName="active" to="/cart" id="cart">Cart</NavLink>

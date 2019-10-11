@@ -1,0 +1,9 @@
+.cardParent {
+    /* width: 18rem; */
+    background-color: '#alice';
+}
+.cardTitle {
+    color: #05386b;
+    font-weight: bold;
+    font-size: 20px;
+}
