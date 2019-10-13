@@ -64,13 +64,13 @@ class TreeList extends Component {
                                     }}> Drained </Dropdown.Item>
                                 <Dropdown.Header> Sun Requirements</Dropdown.Header>
                                 <Dropdown.Item as="button" onClick={() => {
-                                    this.sortByCategory("Drained", "sun")
+                                    this.sortByCategory("Full sun", "sun")
                                     }}> Full sun</Dropdown.Item>
                                 <Dropdown.Item as="button" onClick={() => {
-                                    this.sortByCategory("Drained", "sun")
+                                    this.sortByCategory("Moderate sun", "sun")
                                     }}> Moderate sun</Dropdown.Item>
                                 <Dropdown.Item as="button" onClick={() => {
-                                    this.sortByCategory("Drained", "sun")
+                                    this.sortByCategory("Semi shade", "sun")
                                     }}> Semi shade</Dropdown.Item>
                                 <Dropdown.Header> Maximum Height</Dropdown.Header>
                                 <Dropdown.Item as="button" onClick={() => {
@@ -106,6 +106,12 @@ class TreeList extends Component {
                                 filteredByCategory = filteredTrees.filter(
                                     (filteredTree) =>{
                                         return filteredTree.soil.indexOf(this.state.filterString)!==-1;
+                                    }
+                                ) 
+                            }else if(this.state.filteredCategory === 'sun'){
+                                filteredByCategory = filteredTrees.filter(
+                                    (filteredTree) =>{
+                                        return filteredTree.sun.indexOf(this.state.filterString)!==-1;
                                     }
                                 ) 
                             }else if(this.state.filteredCategory === 'height'){
