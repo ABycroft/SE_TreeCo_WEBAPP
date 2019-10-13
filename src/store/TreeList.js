@@ -5,8 +5,6 @@ import "./treeList.css";
 
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton'
-// set up bootstrap
-// https://youtu.be/wPQ1-33teR4?t=6727
 
 class TreeList extends Component {
 

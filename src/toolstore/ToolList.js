@@ -3,9 +3,6 @@ import Tool from "./Tool";
 import { TreesConsumer } from "../context";
 import "./toollist.css";
 
-// set up bootstrap
-// https://youtu.be/wPQ1-33teR4?t=6727
-
 class TreeList extends Component {
     constructor()
     {
