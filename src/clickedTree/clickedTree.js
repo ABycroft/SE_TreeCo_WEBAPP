@@ -31,12 +31,10 @@ export default class clickedTree extends Component {
                         {care}
                       </p>
                       <h3> Requirements</h3>
-                      <p>
-                        <div> Tree Category: {category}</div>
-                        <div> Soil: {soil}</div>
-                        <div> Sun: {sun}</div>
-                        <div> Maximum Height: {maxHeight} m</div>
-                      </p>
+                      <p> <strong>Tree Category:</strong> {category}</p>
+                      <p> <strong>Soil:</strong> {soil}</p>
+                      <p> <strong>Sun:</strong> {sun}</p>
+                      <p> <strong>Maximum Height:</strong> {maxHeight}m</p>
                       <h2>${price}</h2>
   
                       <Link to="/store">

@@ -21,10 +21,7 @@ export default class PaymentSuccess extends Component {
                             }
                         );
                         value.emptyCart();
-                        console.log("success called");
-                        
                     }
-                          
                     return (
                         <div className="success">
                             <h2>Thank you for your purchase!</h2>
