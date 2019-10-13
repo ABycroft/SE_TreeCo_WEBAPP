@@ -14,13 +14,27 @@ class TreeList extends Component {
     {
         super();
         this.state={
-            search: ''
+            search: '',
+            filterString: '',
+            filteredCategory: ''
         };
     }
 
     updateSearch(event){
         this.setState({search:event.target.value.substr(0,20).toLowerCase()})
     }
+
+    sortByCategory =(category, filterGroup) =>{
+        console.log("called sortByCategory");
+        this.setState(()=>{
+            return{
+                filterString: category,
+                filteredCategory: filterGroup
+            }
+        })
+
+    }
+
     render() {            
         return (
             <div className="container pb-5 pt-3" >
@@ -29,21 +43,45 @@ class TreeList extends Component {
                 </form>
                 <DropdownButton id="filterButton" class="btn mx-1" title="Filter by Category" onClick={this.handleClick} >
                                 <Dropdown.Header> Tree Category</Dropdown.Header>
-                                <Dropdown.Item as="button" onClick={this.sortByCategory("NZ Native")}> NZ Native</Dropdown.Item>
-                                <Dropdown.Item as="button" onClick={this.sortByCategory("Evergreen")}> Evergreen</Dropdown.Item>
-                                <Dropdown.Item as="button" onClick={this.sortByCategory("Decidious")}> Decidious</Dropdown.Item>
+                                <Dropdown.Item as="button" onClick={() => {
+                                    this.sortByCategory("NZ Native", "category")
+                                    }}> NZ Native</Dropdown.Item>
+                                <Dropdown.Item as="button" onClick={() => {
+                                    this.sortByCategory("Evergreen", "category")
+                                    }}> Evergreen</Dropdown.Item>
+                                <Dropdown.Item as="button" onClick={() => {
+                                    this.sortByCategory("Deciduous", "category")
+                                    }}> Deciduous</Dropdown.Item>
                                 <Dropdown.Header> Soil Requirements </Dropdown.Header>
-                                <Dropdown.Item as="button" eventKey={"Moderate"} onClick={this.sortBySoil}> Moderate</Dropdown.Item>
-                                <Dropdown.Item as="button" eventKey={"Moist"} onClick={this.sortBySoil}> Moist</Dropdown.Item>
-                                <Dropdown.Item as="button" eventKey={"Drained"} onClick={this.sortBySoil}> Drained </Dropdown.Item>
+                                <Dropdown.Item as="button" onClick={() => {
+                                    this.sortByCategory("Moderate", "soil")
+                                    }}> Moderate</Dropdown.Item>
+                                <Dropdown.Item as="button" onClick={() => {
+                                    this.sortByCategory("Moist", "soil")
+                                    }}> Moist</Dropdown.Item>
+                                <Dropdown.Item as="button" onClick={() => {
+                                    this.sortByCategory("Drained", "soil")
+                                    }}> Drained </Dropdown.Item>
                                 <Dropdown.Header> Sun Requirements</Dropdown.Header>
-                                <Dropdown.Item as="button" eventKey={"Full"} onClick={this.sortBySun}> Full sun</Dropdown.Item>
-                                <Dropdown.Item as="button" eventKey={"Moderate"} onClick={this.sortBySun}> Moderate sun</Dropdown.Item>
-                                <Dropdown.Item as="button" eventKey={"Semi"} onClick={this.sortBySun}> Semi shade</Dropdown.Item>
+                                <Dropdown.Item as="button" onClick={() => {
+                                    this.sortByCategory("Drained", "sun")
+                                    }}> Full sun</Dropdown.Item>
+                                <Dropdown.Item as="button" onClick={() => {
+                                    this.sortByCategory("Drained", "sun")
+                                    }}> Moderate sun</Dropdown.Item>
+                                <Dropdown.Item as="button" onClick={() => {
+                                    this.sortByCategory("Drained", "sun")
+                                    }}> Semi shade</Dropdown.Item>
                                 <Dropdown.Header> Maximum Height</Dropdown.Header>
-                                <Dropdown.Item as="button" eventKey={10} onClick={this.sortmaxHeight}> 5 - 10m</Dropdown.Item>
-                                <Dropdown.Item as="button" eventKey={11} onSelect={this.sortmaxHeight}> 11 - 20m</Dropdown.Item>
-                                <Dropdown.Item as="button" eventKey={12} onClick={this.sortmaxHeight}> 20+ m</Dropdown.Item>
+                                <Dropdown.Item as="button" onClick={() => {
+                                    this.sortByCategory(10, "height")
+                                    }}> 5 - 10m</Dropdown.Item>
+                                <Dropdown.Item as="button" onClick={() => {
+                                    this.sortByCategory(20, "height")
+                                    }}> 11 - 20m</Dropdown.Item>
+                                <Dropdown.Item as="button" onClick={() => {
+                                    this.sortByCategory(21, "height")
+                                    }}> 20+ m</Dropdown.Item>
                             </DropdownButton>
                 <br></br>
 
@@ -55,7 +93,39 @@ class TreeList extends Component {
                                     return product.name.toLowerCase().indexOf(this.state.search)!==-1;
                                 }
                             )
-                            return filteredTrees.map( product =>{
+                            let filteredByCategory = filteredTrees;
+                            console.log(this.state.filterString);
+
+                            if(this.state.filteredCategory === 'category'){
+                                filteredByCategory = filteredTrees.filter(
+                                    (filteredTree) =>{
+                                        return filteredTree.category.indexOf(this.state.filterString)!==-1;
+                                    }
+                                )    
+                            }else if(this.state.filteredCategory === 'soil'){
+                                filteredByCategory = filteredTrees.filter(
+                                    (filteredTree) =>{
+                                        return filteredTree.soil.indexOf(this.state.filterString)!==-1;
+                                    }
+                                ) 
+                            }else if(this.state.filteredCategory === 'height'){
+                                filteredByCategory = filteredTrees.filter(
+                                    (filteredTree) =>{
+                                        if(filteredTree.maxHeight < 11 && this.state.filterString === 10){
+                                            return filteredTree
+                                        }else if(filteredTree.maxHeight < 21 && filteredTree.maxHeight > 10 && this.state.filterString === 20){
+                                            return filteredTree
+                                        }else if(filteredTree.maxHeight > 20 && this.state.filterString === 21){
+                                            return filteredTree
+                                        }else{
+                                            return null
+                                        }
+                                    }
+                                ) 
+                            }
+                            
+
+                            return filteredByCategory.map( product =>{
                                 return <div className="col-md-3 tree-col" key={product.id}>
                                         <Tree product={product} addToCart={this.props.addToCart}/>
                                     </div>
