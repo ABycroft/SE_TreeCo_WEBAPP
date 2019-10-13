@@ -1,0 +1,11 @@
+.form{
+    max-width: 400px;
+    margin: auto;
+}
+.form-container{
+    text-align: center;
+}
+.purchase{
+    background-color: #60DA99 !important;
+    color: #ffffff !important;
+}

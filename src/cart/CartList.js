@@ -5,8 +5,9 @@ export default function CartList({value}) {
     const { cart } = value
     return (
         <div className="container-fluid">
-            {cart.map(item =>{
-                return <CartItem key={value.id} item={item} value={value}/>
+
+            {cart.map(function(item, i){
+                return <CartItem key={i} item={item} value={value} />
             })}
         </div>
     )
