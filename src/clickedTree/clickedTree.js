@@ -35,7 +35,7 @@ export default class clickedTree extends Component {
                         <div> Tree Category: {category}</div>
                         <div> Soil: {soil}</div>
                         <div> Sun: {sun}</div>
-                        <div> Maximum Height: {maxHeight} m</div>
+                        <div> Maximum Height: {maxHeight}m</div>
                       </p>
                       <h2>${price}</h2>
   
