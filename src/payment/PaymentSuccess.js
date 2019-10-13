@@ -4,7 +4,8 @@ import './success.css';
 
 export default class PaymentSuccess extends Component {
     state = {
-        cartFull: true
+        cartFull: true,
+        cartTotal: 0
     }
 
     render() {
@@ -18,6 +19,7 @@ export default class PaymentSuccess extends Component {
                             ()=>{
                                 return {
                                     cartFull: false,
+                                    cartTotal: value.cartTotal
                                 }
                             }
                         );
@@ -28,6 +30,7 @@ export default class PaymentSuccess extends Component {
                             <h2>Thank you for your purchase!</h2>
                             <br></br>
                             <h4>Your order will be delivered in 5-7 working days</h4>
+                            <h4>Total: ${this.state.cartTotal}</h4>
                         </div>
                     );
                 }}

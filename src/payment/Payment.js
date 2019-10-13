@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter} from 'react-router-dom';
+import { TreesConsumer } from '../context';
+
 
 import './payment.css';
 
@@ -12,7 +14,14 @@ class Payment extends Component {
         
         return (
             <div className="form-container">
-                
+                <br></br>
+                <TreesConsumer>
+                    {value => {
+                            return(
+                                <h4>Total: ${value.cartTotal}</h4>                            
+                            );
+                    }}
+                </TreesConsumer>
             
                 <form className="form" onSubmit={this.onSubmit}>
                     <br></br>
