@@ -5,7 +5,12 @@ export const treesData = [
         img: "trees/birch_tree.png",
         price: 1200,
         inCart: false,
-        quantity: 0
+        quantity: 0,
+        category: "Deciduous",
+        soil: "moist",
+        sun: "Semi shade",
+        maxHeight: "13m",
+        about: "Placeholder text for more information about the tree"
     },
     {
         id: 2,
@@ -13,7 +18,12 @@ export const treesData = [
         img: "trees/fir_tree.jpg",
         price: 1350,
         inCart: false,
-        quantity: 0
+        quantity: 0,
+        category: "Evergreen",
+        soil: "moderate",
+        sun: "Semi shade",
+        maxHeight: "15m",
+        about: "Some quick example text to build on the card title and make up the bulk of the card's content."
     },
     {
         id: 3,
@@ -21,7 +31,12 @@ export const treesData = [
         img: "trees/kauri_tree.jpg",
         price: 1980,
         inCart: false,
-        quantity: 0
+        quantity: 0,
+        category: "NZ Native",
+        soil: "moderate",
+        sun: "Full sun",
+        maxHeight: "60m",
+        about: "Some quick example text to build on the card title and make up the bulk of the card's content."
     },
     {
         id: 4,
@@ -29,7 +44,12 @@ export const treesData = [
         img: "trees/oak_tree.jpg",
         price: 1250,
         inCart: false,
-        quantity: 0
+        quantity: 0,
+        category: "Deciduous",
+        soil: "moist",
+        sun: "Full sun",
+        maxHeight: "25m",
+        about: "Some quick example text to build on the card title and make up the bulk of the card's content."
     },
     {
         id: 5,
@@ -37,7 +57,173 @@ export const treesData = [
         img: "trees/pohutukawa_tree.jpg",
         price: 1700,
         inCart: false,
-        quantity: 0
+        quantity: 0,
+        category: "NZ Native",
+        soil: "moderate",
+        sun: "Semi shade",
+        maxHeight: "20m",
+        about: "Some quick example text to build on the card title and make up the bulk of the card's content."
+    },
+    {
+        id: 6,
+        name: "Pin Oak",
+        img: "https://www.theplantstore.co.nz/files/15704_20140919121411-1411085651_postcard.jpg",
+        price: 1045,
+        inCart: false,
+        quantity: 0,
+        category: "Deciduous",
+        soil: "moist",
+        sun: "Moderate Sun",
+        maxHeight: "10",
+        about: "Some quick example text to build on the card title and make up the bulk of the card's content."
+    },
+    {
+        id: 7,
+        name: "Verdale Olive",
+        img: "https://greenleafnurseries.co.nz/wp-content/uploads/2013/06/olive-verdale-500.jpg",
+        price: 950,
+        inCart: false,
+        quantity: 0,
+        category: "Evergreen",
+        soil: "moist",
+        sun: "Full sun",
+        maxHeight: "5",
+        about: "Some quick example text to build on the card title and make up the bulk of the card's content."
+    },
+    {
+        id: 8,
+        name: "Henkel Yellowwood",
+        img: "https://www.icontrees.co.nz/ic/2859129367/Podocarpus%20Henkelii%20tree.JPG",
+        price: 1555,
+        inCart: false,
+        quantity: 0,
+        category: "Evergreen",
+        soil: "moist",
+        sun: "Moderate sun",
+        maxHeight: "8",
+        about: "Some quick example text to build on the card title and make up the bulk of the card's content."
+    },
+    {
+        id: 9,
+        name: "Japanese Maple",
+        img: "http://cdn.shopify.com/s/files/1/0059/8835/2052/products/Red-Dragon-Japanese-Maple-50w_grande.jpg?v=1549677963",
+        price: 1250,
+        inCart: false,
+        quantity: 0,
+        category: "Deciduous",
+        soil: "moderate",
+        sun: "Semi shade",
+        maxHeight: "5",
+        about: "Some quick example text to build on the card title and make up the bulk of the card's content."
+    },
+    {
+        id: 10,
+        name: "Japanese Cherry",
+        img: "https://images-na.ssl-images-amazon.com/images/I/61S%2BLF61WSL._SX466_.jpg",
+        price: 1350,
+        inCart: false,
+        quantity: 0,
+        category: "Deciduous",
+        soil: "moist",
+        sun: "Full sun",
+        maxHeight: "6",
+        about: "Some quick example text to build on the card title and make up the bulk of the card's content."
+    },
+    {
+        id: 11,
+        name: "Kowhai",
+        img: "https://www.pncc.govt.nz/media/3130006/kowhai.jpg?anchor=center&mode=crop&width=1920&height=1080&rnd=131986076970000000&center=0.5,0.5",
+        price: 1660,
+        inCart: false,
+        quantity: 0,
+        category: "NZ Native",
+        soil: "drained",
+        sun: "Semi shade",
+        maxHeight: "8",
+        about: "Some quick example text to build on the card title and make up the bulk of the card's content."
+    }
+];
+
+export const toolsData = [
+    {
+        id: 12,
+        name: "Spade",
+        img: "https://media.4rgos.it/i/Argos/7529412_R_Z001A?w=750&h=440&qlt=70",
+        price: 20,
+        inCart: false,
+        quantity: 0,
+    },
+    {
+        id: 13,
+        name: "Watering can",
+        img: "https://media.tractorsupply.com/is/image/TractorSupplyCompany/1060800?$456$",
+        price: 25,
+        inCart: false,
+        quantity: 0,
+    },
+    {
+        id: 14,
+        name: "Hose",
+        img: "https://gilmour.com/wp-content/uploads/2018/03/flexogen-heavy-duty-hose-6450-600x600.jpg",
+        price: 30,
+        inCart: false,
+        quantity: 0,
+    },
+    {
+        id: 15,
+        name: "Soil",
+        img: "https://images.homedepot-static.com/productImages/8d51618a-abef-4199-9eb8-c8030f7fd37c/svn/miracle-gro-garden-soil-75030430-64_1000.jpg",
+        price: 16,
+        inCart: false,
+        quantity: 0,
+    },
+    {
+        id: 16,
+        name: "Compost",
+        img: "https://www.kings.co.nz/media/catalog/product/cache/1/thumbnail/600x/17f82f742ffe127f42dca9de82fb58b1/p/r/product_860_20120210_184013.jpg",
+        price: 18,
+        inCart: false,
+        quantity: 0,
+    },
+    {
+        id: 17,
+        name: "Shears",
+        img: "https://cdn.shopify.com/s/files/1/1731/8397/products/Shears_Pruning_Square_2048x@2x.jpg?v=1499762835",
+        price: 29,
+        inCart: false,
+        quantity: 0,
+    },
+    {
+        id: 18,
+        name: "Sprinkler",
+        img: "https://www.therange.co.uk/_m4/4/9/1518598474_6382.jpg",
+        price: 16,
+        inCart: false,
+        quantity: 0,
+    },
+    {
+        id: 19,
+        name: "Fertilizer",
+        img: "https://images.homedepot-static.com/productImages/37fdb432-2c29-4f58-add7-4c5af651cae2/svn/vigoro-granular-fertilizer-52203pm-64_1000.jpg",
+        price: 21,
+        inCart: false,
+        quantity: 0,
+    },
+    {
+        id: 20,
+        name: "Gumboots",
+        img: "https://db1736767dbd5e7094bb-d61bbc5d0b342a54145a236e2d5d1ebf.ssl.cf4.rackcdn.com/Product-190x190/438983df-2ccf-4a04-b9ee-655e3eccfdf8.jpg",
+        price: 35,
+        inCart: false,
+        quantity: 0,
+    },
+    {
+        id: 21,
+        name: "Gloves",
+        img: "https://www.americangloveco.com/wp-content/uploads/2016/09/bbg-2.jpg",
+        price: 13,
+        inCart: false,
+        quantity: 0,
     }
 ];
 
@@ -47,5 +233,10 @@ export const clickedTree = {
         img: "trees/birch_tree.png",
         price: 1200,
         inCart: false,
-        quantity: 0
+        quantity: 0,
+        category: "NZ Native",
+        soil: "drained",
+        sun: "Semi shade",
+        maxHeight: "",
+        about: "Some quick example text to build on the card title and make up the bulk of the card's content."
 }

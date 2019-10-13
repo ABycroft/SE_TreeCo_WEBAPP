@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 import { TreesConsumer } from '../context';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import './tree.css';
+import './tool.css';
 
 export default class Tree extends Component {
     render() {
@@ -13,26 +12,24 @@ export default class Tree extends Component {
             <ProductWrapper>
                 <TreesConsumer>
                     {(value) => (
-                        <Card className="cardParent">
-                            <Link to="/details">
-                                <Card.Img width="300px" height="200px" variant="top" src={img} alt="tree" className="card-img-top mb-1" onClick={() => {
-                                    //onClick
-                                    value.handleClickedTree(id)
-                                }} />
-                            </Link>
+                        <Card  className="cardParent">
+                            
+                            <Card.Img  width="300px" height="200px" variant="top" src={img} alt="tree" className="card-img-top mb-1" />
+                            
                             <Card.Body>
                                 <Card.Title className="cardTitle">{name}</Card.Title>
+                                
                                 <p>
                                     ${price}
                                 </p>
-                                <Button className="btn-green" disabled={inCart ? true : false} variant="light" onClick={() => {
+                                <Button disabled={inCart?true:false} style={{backgroundColor:"#60DA99",color:"#ffffff"}}  variant="light" onClick={() =>{
                                     // onClick
-                                    value.addToCart(id);
+                                    value.addToolToCart(id);
                                 }}>
-                                    {inCart ? (<p className="test-capitalize mb-0">In Cart</p>) : (<p className="test-capitalize mb-0">Add to Cart</p>)}
+                                    {inCart?(<p className="test-capitalize mb-0">In Cart</p>):(<p className="test-capitalize mb-0">Add to Cart</p>)}
                                 </Button>
                             </Card.Body>
-                        </Card>
+                        </Card> 
                     )}
                 </TreesConsumer>
             </ProductWrapper>
