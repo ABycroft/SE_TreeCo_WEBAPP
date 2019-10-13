@@ -5,8 +5,6 @@ import "./treeList.css";
 
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton'
-// set up bootstrap
-// https://youtu.be/wPQ1-33teR4?t=6727
 
 class TreeList extends Component {
 
@@ -32,7 +30,14 @@ class TreeList extends Component {
                 filteredCategory: filterGroup
             }
         })
-
+    }
+    clearFilter = () =>{
+        this.setState(()=>{
+            return{
+                filterString: '',
+                filteredCategory: ''
+            }
+        })
     }
 
     render() {            
@@ -42,6 +47,10 @@ class TreeList extends Component {
                     <input type="text" placeholder="Search" value={this.state.search} onChange={this.updateSearch.bind(this)} className="" />
                 </form>
                 <DropdownButton id="filterButton" className="dropdown-button btn mx-1" title="Filter by Category" onClick={this.handleClick} >
+                                <Dropdown.Item as="button" onClick={() => {
+                                    this.clearFilter()
+                                    }}> Clear Filters
+                                </Dropdown.Item>
                                 <Dropdown.Header> Tree Category</Dropdown.Header>
                                 <Dropdown.Item as="button" onClick={() => {
                                     this.sortByCategory("NZ Native", "category")
