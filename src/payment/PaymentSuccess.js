@@ -30,7 +30,7 @@ export default class PaymentSuccess extends Component {
                             <h2>Thank you for your purchase!</h2>
                             <br></br>
                             <h4>Your order will be delivered in 5-7 working days</h4>
-                            <p>Total: {this.state.cartTotal}</p>
+                            <h4>Total: ${this.state.cartTotal}</h4>
                         </div>
                     );
                 }}
