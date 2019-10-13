@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import Tree from "./Tree";
 import { TreesConsumer } from "../context";
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
-import FormControl from 'react-bootstrap/FormControl';
+import "./treelist.css";
 // set up bootstrap
 // https://youtu.be/wPQ1-33teR4?t=6727
 
@@ -18,40 +16,34 @@ class TreeList extends Component {
     }
 
     updateSearch(event){
-        this.setState({search:event.target.value.substr(0,20)})
+        this.setState({search:event.target.value.substr(0,20).toLowerCase()})
     }
     render() {
-        let filteredTrees = this.products.filter(
-            (product) =>{
-                return product.name.indexOf(this.state.search)!==-1;
-            }
-
-        )
-        
+            
         //console.log(this.state.trees);
         return (
-            <div className="container py-5">
-
-                <div>
-                <Form inLine>
-                    <FormControl type="text" placeholder="Search" value={this.state.search} onChange={this.updateSearch.bind(this)} className="mr-sm-2" />
-                    <Button onclick="myFunction()" variant="outline-success">Search</Button>
-                </Form>
-                </div>
+            <div className="container pb-5 pt-3" >
+                <form className="text-right">
+                    <input type="text" placeholder="Search" value={this.state.search} onChange={this.updateSearch.bind(this)} className="mr-sm-2" />
+                </form>
+                <br></br>
 
                 <div className="row">
 
                     <TreesConsumer>
-
                         {value => {
                             //console.log(value)
-                            
+                            let filteredTrees = value.products.filter(
+                                (product) =>{
+                                    return product.name.toLowerCase().indexOf(this.state.search)!==-1;
+                                }
+                            )
                                 
-                                return value.products.map( product =>{
-                                    return <div className="col-md-3 tree-col" key={product.id}>
-                                            <Tree product={product} addToCart={this.props.addToCart}/>
-                                        </div>
-                                })
+                            return filteredTrees.map( product =>{
+                                return <div className="col-md-3 tree-col" key={product.id}>
+                                        <Tree product={product} addToCart={this.props.addToCart}/>
+                                    </div>
+                            })
                             
                         }}
 
