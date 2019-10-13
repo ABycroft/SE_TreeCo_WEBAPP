@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import TreeList from "./TreeList";
 import './store.css';
 import { TreesConsumer } from '../context';
-import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton'
 
 /**
  * This is a page component.

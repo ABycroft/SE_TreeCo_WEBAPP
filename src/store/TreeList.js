@@ -23,7 +23,6 @@ class TreeList extends Component {
     }
 
     sortByCategory =(category, filterGroup) =>{
-        console.log("called sortByCategory");
         this.setState(()=>{
             return{
                 filterString: category,
@@ -103,7 +102,6 @@ class TreeList extends Component {
                                 }
                             )
                             let filteredByCategory = filteredTrees;
-                            console.log(this.state.filterString);
 
                             if(this.state.filteredCategory === 'category'){
                                 filteredByCategory = filteredTrees.filter(

@@ -246,9 +246,9 @@ export const clickedTree = {
         inCart: false,
         quantity: 0,
         category: "NZ Native",
-        soil: "drained",
+        soil: "Drained",
         sun: "Semi shade",
-        maxHeight: "",
+        maxHeight: "13",
         about: "The number one silver birch, hardy neat upright form with stunning pure white stem. A beautiful tree worthy of any landscape.",
         care: "Birch trees should should be pruned to maintain optimal health and a strong structure; remove lower hanging branches that interfere with walkways or driveways."
 }
