@@ -13,12 +13,12 @@ class Home extends Component {
         return (
             <div className='home-content'>
                 <h2>Welcome to PlantATree</h2>
-                <p>Find and purchase trees to suit your situation, without the hassle. Browse through our large selection of trees and gardening items.</p>
+                <p>Find and purchase trees to suit your situation, without the hassle. Check out our large selection of trees and gardening items.</p>
                 <Carousel>
                     <Carousel.Item>
                         <img
                             className="d-block imgs"
-                            src="https://www.icontrees.co.nz/ic/2859129367/Podocarpus%20Henkelii%20tree.JPG"
+                            src="trees/yellowwood.jpg"
                             alt="First slide"
                         />
                         <Carousel.Caption>
@@ -28,7 +28,7 @@ class Home extends Component {
                     <Carousel.Item>
                         <img
                             className="d-block imgs"
-                            src="http://cdn.shopify.com/s/files/1/0059/8835/2052/products/Red-Dragon-Japanese-Maple-50w_grande.jpg?v=1549677963"
+                            src="trees/Japanese_Maple.jpg"
                             alt="Second slide"
                         />
 
@@ -39,7 +39,7 @@ class Home extends Component {
                     <Carousel.Item>
                         <img
                             className="d-block imgs"
-                            src="https://images-na.ssl-images-amazon.com/images/I/61S%2BLF61WSL._SX466_.jpg"
+                            src="trees/japanese_cherry.jpg"
                             alt="Third slide"
                         />
                         <Carousel.Caption>
