@@ -8,7 +8,7 @@ export default class clickedTree extends Component {
         return (
           <TreesConsumer>
             {value => {
-              const {id, name, img, price, inCart} = value.clickedTree;
+              const {id, name, img, price, category, soil, sun, maxHeight, care, inCart, about} = value.clickedTree;
               return (
                 <div className="container py-5">
                   <div className='row'>
@@ -23,10 +23,21 @@ export default class clickedTree extends Component {
                       <img src={img} className="img-fluid" alt="tree"/>
                     </div>
                     <div className="col-10 mx-auto col-md-6 my-3">
-                      <h2>${price}</h2>
+                    <h3>Product Description and Care</h3>
                       <p>
-                        details about product
+                        {about}
                       </p>
+                      <p>
+                        {care}
+                      </p>
+                      <h3> Requirements</h3>
+                      <p>
+                        <div> Tree Category: {category}</div>
+                        <div> Soil: {soil}</div>
+                        <div> Sun: {sun}</div>
+                        <div> Maximum Height: {maxHeight} m</div>
+                      </p>
+                      <h2>${price}</h2>
   
                       <Link to="/store">
                         <Button style={{backgroundColor:"#60DA99",color:"#ffffff"}}  variant="light">

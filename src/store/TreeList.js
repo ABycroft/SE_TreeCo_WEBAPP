@@ -16,9 +16,10 @@ class TreeList extends Component {
 
                         {value => {
                             //console.log(value)
-                         return value.products.map( product =>{
-                                return <div className="col-md-3 tree-col" key={product.id}><Tree product={product} addToCart={this.props.addToCart}/></div>
-
+                            return value.products.map(product => {
+                                return <div className="col-md-3 tree-col" key={product.id}>
+                                    <Tree product={product} addToCart={this.props.addToCart} />
+                                </div>
                             })
                         }}
 
@@ -28,5 +29,4 @@ class TreeList extends Component {
         )
     }
 }
-
 export default TreeList

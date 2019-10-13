@@ -2,16 +2,13 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { TreesConsumer } from '../context';
-import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Button'
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 import './tree.css';
-
-
-// https://youtu.be/wPQ1-33teR4?t=7714
 
 export default class Tree extends Component {
     render() {
-        const {id, name, img, price, inCart} = this.props.product;
+        const { id, name, img, price, inCart } = this.props.product;
         return (
             <ProductWrapper>
                 <TreesConsumer>
@@ -25,10 +22,7 @@ export default class Tree extends Component {
                             </Link>
                             <Card.Body>
                                 <Card.Title className="cardTitle">{name}</Card.Title>
-                                <p>
-                                    Some quick example text to build on the card title and make up the bulk of
-                                    the card's content.
-                                </p>
+                                
                                 <p>
                                     ${price}
                                 </p>
@@ -41,7 +35,6 @@ export default class Tree extends Component {
                             </Card.Body>
                         </Card> 
                     )}
-                  
                 </TreesConsumer>
             </ProductWrapper>
         )

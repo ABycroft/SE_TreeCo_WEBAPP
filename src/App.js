@@ -6,6 +6,8 @@ import Store from './store/Store';
 import Home from './home/Home';
 import ClickedTree from './clickedTree/clickedTree';
 import Cart from './cart/';
+import Purchase from './payment/Payment';
+import PaymentSuccess from './payment/PaymentSuccess';
 import "bootstrap/dist/css/bootstrap.min.css";
 
 /**
@@ -22,6 +24,8 @@ function App() {
                     <Route path = "/store" component={Store}/>
                     <Route path = "/details" component={ClickedTree}/>
                     <Route path = "/cart" component={Cart}/>
+                    <Route path = "/payment" component={Purchase}/>
+                    <Route path = "/success" component={PaymentSuccess}/>
                 </div>
             </Router>
         </div>
