@@ -39,9 +39,9 @@ class TreeList extends Component {
         return (
             <div className="container pb-5 pt-3" >
                 <form className="text-right">
-                    <input type="text" placeholder="Search" value={this.state.search} onChange={this.updateSearch.bind(this)} className="mr-sm-2" />
+                    <input type="text" placeholder="Search" value={this.state.search} onChange={this.updateSearch.bind(this)} className="" />
                 </form>
-                <DropdownButton id="filterButton" class="btn mx-1" title="Filter by Category" onClick={this.handleClick} >
+                <DropdownButton id="filterButton" className="dropdown-button btn mx-1" title="Filter by Category" onClick={this.handleClick} >
                                 <Dropdown.Header> Tree Category</Dropdown.Header>
                                 <Dropdown.Item as="button" onClick={() => {
                                     this.sortByCategory("NZ Native", "category")
@@ -130,7 +130,6 @@ class TreeList extends Component {
                                 ) 
                             }
                             
-
                             return filteredByCategory.map( product =>{
                                 return <div className="col-md-3 tree-col" key={product.id}>
                                         <Tree product={product} addToCart={this.props.addToCart}/>

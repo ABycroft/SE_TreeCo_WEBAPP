@@ -83,3 +83,7 @@ body {
 .cart-remove:hover {
   cursor: pointer;
 }
+
+div.row{
+  margin-top:50px;
+}
