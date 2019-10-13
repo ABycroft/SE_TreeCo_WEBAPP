@@ -13,8 +13,6 @@ export default class PaymentSuccess extends Component {
             <TreesConsumer>
                 {value => {
                     if(this.state.cartFull){
-                        value.emptyCart();
-                        console.log("success called");
                         this.setState(
                             ()=>{
                                 return {
@@ -23,6 +21,9 @@ export default class PaymentSuccess extends Component {
                                 }
                             }
                         );
+                        value.emptyCart();
+                        console.log("success called");
+                        
                     }
                           
                     return (
