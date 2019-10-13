@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Tree from "./Tree";
 import { TreesConsumer } from "../context";
-import "./treeList.css";
+import "./treelist.css";
 
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton'
