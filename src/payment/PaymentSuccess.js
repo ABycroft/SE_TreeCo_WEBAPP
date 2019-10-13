@@ -7,7 +7,6 @@ export default class PaymentSuccess extends Component {
         cartFull: true,
         cartTotal: 0
     }
-
     render() {
         return (
             <TreesConsumer>

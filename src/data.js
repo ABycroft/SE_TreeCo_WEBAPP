@@ -10,7 +10,8 @@ export const treesData = [
         soil: "moist",
         sun: "Semi shade",
         maxHeight: "13m",
-        about: "Placeholder text for more information about the tree"
+        about: "The number one silver birch, hardy neat upright form with stunning pure white stem. A beautiful tree worthy of any landscape.",
+        care: "Birch trees should should be pruned to maintain optimal health and a strong structure; remove lower hanging branches that interfere with walkways or driveways."
     },
     {
         id: 2,
@@ -23,7 +24,8 @@ export const treesData = [
         soil: "moderate",
         sun: "Semi shade",
         maxHeight: "15m",
-        about: "Some quick example text to build on the card title and make up the bulk of the card's content."
+        about: "A handsome, blunt blue-tinged needles and a lovely fragrance. These same characteristics which make them popular Christmas trees also make them a good choice for a small garden if you are looking for a specimen tree to act as a focal point.",
+        care: "Fir should be grown at a close enough spacing to restrict branch size, and a square spacing is better at controlling branch size than a rectangular spacing."
     },
     {
         id: 3,
@@ -36,7 +38,8 @@ export const treesData = [
         soil: "moderate",
         sun: "Full sun",
         maxHeight: "60m",
-        about: "Some quick example text to build on the card title and make up the bulk of the card's content."
+        about: "The New Zealand kauri is the largest tree in the Agathis genus and the only Agathis species native to New Zealand",
+        care:"Kauri growth requires high light levels but can tolerate low soil nutrient levels. "
     },
     {
         id: 4,
@@ -49,8 +52,9 @@ export const treesData = [
         soil: "moist",
         sun: "Full sun",
         maxHeight: "25m",
-        about: "Some quick example text to build on the card title and make up the bulk of the card's content."
-    },
+        about: "Great for providing shade in summers. Low-maintenance trees that are easy to take care of in your home garden",
+        care: "Oak trees prefer full sun and well-drained soil. They enjoy a natural change of seasons, with dry summers and moist winters. As long as you experience winter rainfall, you don't need to water oak trees in winter. "
+   },
     {
         id: 5,
         name: "Pohutukawa",
@@ -62,7 +66,8 @@ export const treesData = [
         soil: "moderate",
         sun: "Semi shade",
         maxHeight: "20m",
-        about: "Some quick example text to build on the card title and make up the bulk of the card's content."
+        about: "Nicknamed the'New Zealand Christmas Tree' due to its bright flowers that resemble tree decor. It is prized as a beautiful ornamental tree by many gardeners.",
+        care: "Water the tree once every two or three days in the first growing season. This will help the tree remain strong and establish itself faster."
     },
     {
         id: 6,
@@ -75,8 +80,9 @@ export const treesData = [
         soil: "moist",
         sun: "Moderate Sun",
         maxHeight: "10",
-        about: "Some quick example text to build on the card title and make up the bulk of the card's content."
-    },
+        about: "It has a growth rate of 60cm a year and is one of the fastest growing oak trees. It is tolerant of wet soils and a great home for birds.",
+        care: "Pin oaks can develop iron chlorosis if soil pH is too high or alkaline, which causes leaves to turn yellow and drop prematurely. To correct this, use acidic or iron rich soil amendments or tree fertilizers."
+   },
     {
         id: 7,
         name: "Verdale Olive",
@@ -88,8 +94,9 @@ export const treesData = [
         soil: "moist",
         sun: "Full sun",
         maxHeight: "5",
-        about: "Some quick example text to build on the card title and make up the bulk of the card's content."
-    },
+        about: "Grows tall and upright with thinned branching. Leaves are green/silver in colour and the bark is a light grey. Verdale produces medium sized, good quality olives.",
+        care: "This tree orginiatese from the mediterranean and would not do well in colder environments of the South Island."
+   },
     {
         id: 8,
         name: "Henkel Yellowwood",
@@ -101,8 +108,8 @@ export const treesData = [
         soil: "moist",
         sun: "Moderate sun",
         maxHeight: "8",
-        about: "Some quick example text to build on the card title and make up the bulk of the card's content."
-    },
+        about: "A medium to large tree with dense, lush green foliage which is narrow and thin. Very slow growing and mildly drought tolerant.",
+        care: "Requires light pruning and shelter from strong winds."    },
     {
         id: 9,
         name: "Japanese Maple",
@@ -114,7 +121,8 @@ export const treesData = [
         soil: "moderate",
         sun: "Semi shade",
         maxHeight: "5",
-        about: "Some quick example text to build on the card title and make up the bulk of the card's content."
+        about: "Beautiful tree in Autumn displaying brilliant scarlet tones and has attractive crimson coloured seeds.",
+        care: "Most maples do not thrive in clay, heavy or poorly drained soils. These types of soils can lead to root rot and bring about disease.   In addition plants breathe through their roots and these soil types are not suitable for growth because they are low in oxygen required for good root growth."
     },
     {
         id: 10,
@@ -127,7 +135,8 @@ export const treesData = [
         soil: "moist",
         sun: "Full sun",
         maxHeight: "6",
-        about: "Some quick example text to build on the card title and make up the bulk of the card's content."
+        about: "Absolutely magnificent, it brightens our first spring days with abundant flowers in hues that range from white to pink.",
+        care: "Very hardy to the cold and can survive in temperatures as low as -15°c to -20°c"
     },
     {
         id: 11,
@@ -140,7 +149,9 @@ export const treesData = [
         soil: "drained",
         sun: "Semi shade",
         maxHeight: "8",
-        about: "Some quick example text to build on the card title and make up the bulk of the card's content."
+        about: "Kōwhai are beautiful native trees iconic to New Zealand, with the gorgeous yellow flowers – while unofficial – being widely recognised as NZ’s native flower.",
+        care: "Kōwhai grow in most soil types, however the speed is dependent on the quality. They tolerate dry soil and can also grow in clay soil however it will be slower than well-drained soil which they thrive in."
+
     }
 ];
 
@@ -238,5 +249,6 @@ export const clickedTree = {
         soil: "drained",
         sun: "Semi shade",
         maxHeight: "",
-        about: "Some quick example text to build on the card title and make up the bulk of the card's content."
+        about: "The number one silver birch, hardy neat upright form with stunning pure white stem. A beautiful tree worthy of any landscape.",
+        care: "Birch trees should should be pruned to maintain optimal health and a strong structure; remove lower hanging branches that interfere with walkways or driveways."
 }

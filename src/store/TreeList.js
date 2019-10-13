@@ -28,8 +28,7 @@ class TreeList extends Component {
 
                 <div className="row">
                     <TreesConsumer>
-                        {value => {
-                        
+                        {value => {                        
                             let filteredTrees = value.products.filter(
                                 (product) =>{
                                     return product.name.toLowerCase().indexOf(this.state.search)!==-1;
@@ -48,5 +47,4 @@ class TreeList extends Component {
         )
     }
 }
-
 export default TreeList

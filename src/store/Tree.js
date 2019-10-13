@@ -40,7 +40,6 @@ export default class Tree extends Component {
     } // Old button color was #379683
 }
 
-
 // this deals with the border shadow and animation
 const ProductWrapper = styled.div`
 .cardParent{

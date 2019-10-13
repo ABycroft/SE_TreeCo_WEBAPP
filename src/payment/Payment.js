@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter} from 'react-router-dom';
 import { TreesConsumer } from '../context';
-
-
 import './payment.css';
 
 class Payment extends Component {
@@ -10,8 +8,7 @@ class Payment extends Component {
         this.props.history.push(`/success/`);
     };
     
-    render() {
-        
+    render() {      
         return (
             <div className="form-container">
                 <br></br>
