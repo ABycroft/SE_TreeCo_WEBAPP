@@ -137,7 +137,7 @@ class TreesProvider extends Component {
     handleSelect
 
     //TODO
-    sortByCategory = (value) => {
+    sortByCategory = value => {
         let tempProducts = [...this.state.products];
         console.log(tempProducts);
         //if the Decidious button is selected, it will return its name will find a match
@@ -147,11 +147,11 @@ class TreesProvider extends Component {
         console.log("done");
 
         this.setState(
-            (value) => {
+            () => {
                 if (value === "NZ Native") {
                     tempProducts.includes("NZ Native");
                     return {
-                        products: tempProducts,
+                        products: tempProducts.includes("NZ Native"),
                         orderedByCategory: this.state.orderedByCategory
                     }
                 }

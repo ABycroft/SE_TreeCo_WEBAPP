@@ -1,3 +1,7 @@
-.search{
+.search {
     max-width: 300px;
+}
+
+input {
+    padding-left: 5px;
 }
