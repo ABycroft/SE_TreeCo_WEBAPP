@@ -32,7 +32,14 @@ class TreeList extends Component {
                 filteredCategory: filterGroup
             }
         })
-
+    }
+    clearFilter = () =>{
+        this.setState(()=>{
+            return{
+                filterString: '',
+                filteredCategory: ''
+            }
+        })
     }
 
     render() {            
@@ -42,6 +49,10 @@ class TreeList extends Component {
                     <input type="text" placeholder="Search" value={this.state.search} onChange={this.updateSearch.bind(this)} className="mr-sm-2" />
                 </form>
                 <DropdownButton id="filterButton" class="btn mx-1" title="Filter by Category" onClick={this.handleClick} >
+                                <Dropdown.Item as="button" onClick={() => {
+                                    this.clearFilter()
+                                    }}> Clear Filters
+                                </Dropdown.Item>
                                 <Dropdown.Header> Tree Category</Dropdown.Header>
                                 <Dropdown.Item as="button" onClick={() => {
                                     this.sortByCategory("NZ Native", "category")
