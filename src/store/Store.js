@@ -19,12 +19,12 @@ class Store extends Component {
     render() {
         return (
             <div className="title">
-                <h2 style={{ color: "#05386b" }}>Tree Products</h2>
+                <h2>Tree Products</h2>
                 <TreesConsumer>
                     {(value) => (
                         <div className="text-right">
-                            <button className="btn mx-1" onClick={value.sortByPrice} style={{ backgroundColor: "#60DA99", color: "#ffffff" }} variant="light">Sort by Price</button>
-                            <button className="btn mx-1" onClick={value.sortByName} style={{ backgroundColor: "#60DA99", color: "#ffffff" }} variant="light">Sort by Name</button>
+                            <button className="btn btn-green mx-1" onClick={value.sortByPrice} variant="light">Sort by Price</button>
+                            <button className="btn btn-green mx-1" onClick={value.sortByName} variant="light">Sort by Name</button>
 
                             <DropdownButton id="filterButton" class="btn mx-1" title="Filter by Category" onClick={this.handleClick} >
                                 <Dropdown.Header> Tree Category</Dropdown.Header>
@@ -51,8 +51,6 @@ class Store extends Component {
             </div>
         )
     }
-
 }
-
 
 export default Store

@@ -72,7 +72,7 @@ export const treesData = [
     {
         id: 6,
         name: "Pin Oak",
-        img: "https://www.theplantstore.co.nz/files/15704_20140919121411-1411085651_postcard.jpg",
+        img: "trees/pin_oak.jpg",
         price: 1045,
         inCart: false,
         quantity: 0,
@@ -86,8 +86,8 @@ export const treesData = [
     {
         id: 7,
         name: "Verdale Olive",
-        img: "https://greenleafnurseries.co.nz/wp-content/uploads/2013/06/olive-verdale-500.jpg",
-        price: 1700,
+        img: "trees/olive_verdale.jpg",
+        price: 950,
         inCart: false,
         quantity: 0,
         category: "Evergreen",
@@ -100,8 +100,8 @@ export const treesData = [
     {
         id: 8,
         name: "Henkel Yellowwood",
-        img: "https://www.icontrees.co.nz/ic/2859129367/Podocarpus%20Henkelii%20tree.JPG",
-        price: 1700,
+        img: "trees/yellowwood.jpg",
+        price: 1555,
         inCart: false,
         quantity: 0,
         category: "Evergreen",
@@ -113,8 +113,8 @@ export const treesData = [
     {
         id: 9,
         name: "Japanese Maple",
-        img: "http://cdn.shopify.com/s/files/1/0059/8835/2052/products/Red-Dragon-Japanese-Maple-50w_grande.jpg?v=1549677963",
-        price: 1700,
+        img: "trees/Japanese_Maple.jpg",
+        price: 1250,
         inCart: false,
         quantity: 0,
         category: "Deciduous",
@@ -127,8 +127,8 @@ export const treesData = [
     {
         id: 10,
         name: "Japanese Cherry",
-        img: "https://images-na.ssl-images-amazon.com/images/I/61S%2BLF61WSL._SX466_.jpg",
-        price: 1700,
+        img: "trees/japanese_cherry.jpg",
+        price: 1350,
         inCart: false,
         quantity: 0,
         category: "Deciduous",
@@ -141,8 +141,8 @@ export const treesData = [
     {
         id: 11,
         name: "Kowhai",
-        img: "https://www.pncc.govt.nz/media/3130006/kowhai.jpg?anchor=center&mode=crop&width=1920&height=1080&rnd=131986076970000000&center=0.5,0.5",
-        price: 1700,
+        img: "trees/kowhai.jpg",
+        price: 1660,
         inCart: false,
         quantity: 0,
         category: "NZ Native",
@@ -151,6 +151,90 @@ export const treesData = [
         maxHeight: "8",
         about: "Kōwhai are beautiful native trees iconic to New Zealand, with the gorgeous yellow flowers – while unofficial – being widely recognised as NZ’s native flower.",
         care: "Kōwhai grow in most soil types, however the speed is dependent on the quality. They tolerate dry soil and can also grow in clay soil however it will be slower than well-drained soil which they thrive in."
+
+    }
+];
+
+export const toolsData = [
+    {
+        id: 12,
+        name: "Spade",
+        img: "gardening_items/spade.jpg",
+        price: 20,
+        inCart: false,
+        quantity: 0,
+    },
+    {
+        id: 13,
+        name: "Watering can",
+        img: "gardening_items/watercan.jpg",
+        price: 25,
+        inCart: false,
+        quantity: 0,
+    },
+    {
+        id: 14,
+        name: "Hose",
+        img: "gardening_items/hose.jpg",
+        price: 30,
+        inCart: false,
+        quantity: 0,
+    },
+    {
+        id: 15,
+        name: "Soil",
+        img: "gardening_items/soil.jpg",        
+        price: 16,
+        inCart: false,
+        quantity: 0,
+    },
+    {
+        id: 16,
+        name: "Compost",
+        img: "gardening_items/compost.jpg",
+        price: 18,
+        inCart: false,
+        quantity: 0,
+    },
+    {
+        id: 17,
+        name: "Shears",
+        img: "gardening_items/shears.jpg",
+        price: 29,
+        inCart: false,
+        quantity: 0,
+    },
+    {
+        id: 18,
+        name: "Sprinkler",
+        img: "gardening_items/sprinkler.jpg",
+        price: 16,
+        inCart: false,
+        quantity: 0,
+    },
+    {
+        id: 19,
+        name: "Fertilizer",
+        img: "gardening_items/fertilizer.jpg",
+        price: 21,
+        inCart: false,
+        quantity: 0,
+    },
+    {
+        id: 20,
+        name: "Gumboots",
+        img: "gardening_items/gumboots.jpg",
+        price: 35,
+        inCart: false,
+        quantity: 0,
+    },
+    {
+        id: 21,
+        name: "Gloves",
+        img: "gardening_items/gloves.jpg",
+        price: 13,
+        inCart: false,
+        quantity: 0,
     }
 ];
 

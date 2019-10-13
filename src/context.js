@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { treesData, clickedTree } from "./data";
+import {treesData, toolsData, clickedTree} from "./data";
 
 const TreesContext = React.createContext();
 //Provider
@@ -8,6 +8,7 @@ const TreesContext = React.createContext();
 class TreesProvider extends Component {
     state = {
         products: [],
+        tools: [],
         cart: [],
         clickedTree: clickedTree,
         cartTotal: 0,
@@ -16,32 +17,40 @@ class TreesProvider extends Component {
         orderedByCategory: false,
         orderedBySoil: false,
         orderedBySun: false,
-        orderedByHeight: false
+        orderedByHeight: false,
+        orderedToolsByName: false,
+        orderedToolsByPrice: false,
     };
     componentDidMount() {
         this.setProducts();
     };
-    // changed before https://youtu.be/wPQ1-33teR4?t=10055
-    setProducts = () => {
+
+    setProducts = () =>{
         let tempProducts = [];
         treesData.forEach(item => {
             const singleItem = { ...item };
             tempProducts = [...tempProducts, singleItem];
         })
-        this.setState(() => {
-            return { products: tempProducts }
+
+        let tempTools = [];
+        toolsData.forEach(item =>{
+            const singleItem = {...item};
+            tempTools = [...tempTools, singleItem];
+        })
+            
+        this.setState(()=>{
+            return{ products: tempProducts,
+                tools: tempTools }
         })
 
     };
 
-    sortByPrice = () => {
-        // called in add to cart onClick
-
+    sortByPrice = () =>{
         let tempProducts = [...this.state.products];
 
-        if (this.state.orderedByPriceLowtoHigh) {
+        if(this.state.orderedByPriceLowtoHigh){
             tempProducts.sort((a, b) => b.price - a.price)
-        } else {
+        }else{
             tempProducts.sort((a, b) => a.price - b.price)
         }
 
@@ -54,34 +63,73 @@ class TreesProvider extends Component {
             }
         );
     };
-    sortByName = () => {
-        // not called atm
-
+    sortByName = () =>{
         let tempProducts = [...this.state.products];
-        console.log(tempProducts);
 
-        if (this.state.orderedByNameLowtoHigh) {
+        if(this.state.orderedByNameLowtoHigh){
             tempProducts.sort((a, b) => {
-                if (a.name < b.name) { return -1; }
-                if (a.name > b.name) { return 1; }
+                if(a.name < b.name) { return -1; }
+                if(a.name > b.name) { return 1; }
                 return 0;
             })
-        } else {
+        }else{
             tempProducts.sort((a, b) => {
-                if (a.name > b.name) { return -1; }
-                if (a.name < b.name) { return 1; }
+                if(a.name > b.name) { return -1; }
+                if(a.name < b.name) { return 1; }
                 return 0;
             })
         }
-
-        console.log(tempProducts);
-        console.log("done");
-
+        
         this.setState(
-            () => {
+            ()=>{
                 return {
                     products: tempProducts,
                     orderedByNameLowtoHigh: !this.state.orderedByNameLowtoHigh
+                }
+            }
+        );
+    };
+
+    sortToolsByName = () =>{
+        let tempProducts = [...this.state.tools];
+
+        if(this.state.orderedToolsByName){
+            tempProducts.sort((a, b) => {
+                if(a.name < b.name) { return -1; }
+                if(a.name > b.name) { return 1; }
+                return 0;
+            })
+        }else{
+            tempProducts.sort((a, b) => {
+                if(a.name > b.name) { return -1; }
+                if(a.name < b.name) { return 1; }
+                return 0;
+            })
+        }
+        
+        this.setState(
+            ()=>{
+                return {
+                    tools: tempProducts,
+                    orderedToolsByName: !this.state.orderedToolsByName
+                }
+            }
+        );
+    };
+    sortToolsByPrice = () =>{
+        let tempProducts = [...this.state.tools];
+
+        if(this.state.orderedToolsByPrice){
+            tempProducts.sort((a, b) => b.price - a.price)
+        }else{
+            tempProducts.sort((a, b) => a.price - b.price)
+        }
+
+        this.setState(
+            ()=>{
+                return {
+                    tools: tempProducts,
+                    orderedToolsByPrice: !this.state.orderedToolsByPrice
                 }
             }
         );
@@ -161,10 +209,13 @@ class TreesProvider extends Component {
             }
         );
     }
-
-
-    getTree = id => {
-        const product = this.state.products.find(item => item.id === id);
+    getTree = id =>{
+        let product = 0;
+        if(id<12){
+            product = this.state.products.find(item => item.id === id);    
+        }else{
+            product = this.state.tools.find(item => item.id === id);  
+        }
         return product;
     };
 
@@ -187,6 +238,27 @@ class TreesProvider extends Component {
                 return { products: tempProducts, cart: [...this.state.cart, product] };
             },
             () => {
+                this.getTotal();
+            }
+        );
+    };
+    getTool = id =>{
+        const product = this.state.tools.find(item => item.id === id);
+        return product;
+    };
+
+    addToolToCart = id => {
+        let tempProducts = [...this.state.tools];
+        const index = tempProducts.indexOf(this.getTool(id));
+        const product = tempProducts[index];
+        product.inCart = true;
+        product.quantity++;
+
+        this.setState(
+            ()=>{
+                return {tools:tempProducts, cart:[...this.state.cart, product]};
+            }, 
+            ()=>{
                 this.getTotal();
             }
         );
@@ -216,25 +288,44 @@ class TreesProvider extends Component {
             this.setState(() => { return { cart: [...tempCart] } }, () => { this.getTotal() });
         }
     };
-    removeItem = id => {
-        let tempTrees = [...this.state.products];
+
+    removeItem = id =>{
+        let tempObjects = 0;
+        
+        if(id<(12)){
+            tempObjects = [...this.state.products];    
+        } else{
+            tempObjects = [...this.state.tools]; 
+        }
+
         let tempCart = [...this.state.cart];
 
         tempCart = tempCart.filter(item => item.id !== id);
 
-        const index = tempTrees.indexOf(this.getTree(id));
-        let removedProduct = tempTrees[index];
+        const index = tempObjects.indexOf(this.getTree(id));
+        let removedProduct = tempObjects[index];
         removedProduct.inCart = false;
         removedProduct.quantity = 0;
 
-        this.setState(() => {
-            return {
-                cart: [...tempCart],
-                products: [...tempTrees]
-            }
-        }, () => {
-            this.getTotal();
-        })
+        if(id<(12)){
+            this.setState(()=>{
+                return {
+                    cart:[...tempCart],
+                    products:[...tempObjects]
+                }
+            },()=>{
+                this.getTotal();
+            })  
+        } else{
+            this.setState(()=>{
+                return {
+                    cart:[...tempCart],
+                    tools:[...tempObjects]
+                }
+            },()=>{
+                this.getTotal();
+            })
+        }
     };
     emptyCart = id => {
         this.setState(() => {
@@ -244,6 +335,7 @@ class TreesProvider extends Component {
             this.getTotal();
         });
     };
+
     getTotal = () => {
         let calcTotal = 0;
         this.state.cart.map(item => (calcTotal += (item.price * item.quantity)));
@@ -270,7 +362,11 @@ class TreesProvider extends Component {
                 sortByCategory: this.sortByCategory,
                 sortBySoil: this.sortBySoil,
                 sortBySun: this.sortBySun,
-                sortByHeight: this.sortByHeight
+                sortByHeight: this.sortByHeight,
+                addToolToCart: this.addToolToCart,
+                getTool: this.getTool,
+                sortToolsByName: this.sortToolsByName,
+                sortToolsByPrice: this.sortToolsByPrice,
             }}>
                 {this.props.children}
             </TreesContext.Provider>

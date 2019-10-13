@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import {TreesConsumer} from '../context';
-import {Link} from 'react-router-dom';
+import { TreesConsumer } from '../context';
+import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 
 export default class clickedTree extends Component {
@@ -43,18 +43,18 @@ export default class clickedTree extends Component {
                         <Button style={{backgroundColor:"#60DA99",color:"#ffffff"}}  variant="light">
                           Back To Store
                         </Button>
-                      </Link>
-                      <Button onClick={()=>{
-                        value.addToCart(id);
-                      }} disabled={inCart?true:false} style={{backgroundColor:"#60DA99",color:"#ffffff"}}  variant="light">
-                        {inCart?(<p className="test-capitalize mb-0">In Cart</p>):(<p className="test-capitalize mb-0">Add to Cart</p>)}
-                      </Button>
-                    </div>
-                  </div>
+                  </Link>
+                  <Button className="btn-green" onClick={() => {
+                    value.addToCart(id);
+                  }} disabled={inCart ? true : false} variant="light">
+                    {inCart ? (<p className="test-capitalize mb-0">In Cart</p>) : (<p className="test-capitalize mb-0">Add to Cart</p>)}
+                  </Button>
                 </div>
-              )
-              }}
-          </TreesConsumer>
-        )
-    }
+              </div>
+            </div>
+          )
+        }}
+      </TreesConsumer>
+    )
+  }
 }
