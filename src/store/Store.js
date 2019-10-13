@@ -3,6 +3,7 @@ import TreeList from "./TreeList";
 import './store.css';
 import { TreesConsumer } from '../context';
 
+
 /**
  * This is a page component.
  * Just another component that holds more components.
@@ -22,6 +23,8 @@ class Store extends Component {
                     )}
                 </TreesConsumer>
                 <TreeList />
+              
+  
             </div>
         )
     }
