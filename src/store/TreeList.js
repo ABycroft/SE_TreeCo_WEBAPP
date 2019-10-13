@@ -19,7 +19,6 @@ class TreeList extends Component {
         this.setState({search:event.target.value.substr(0,20).toLowerCase()})
     }
     render() {            
-        //console.log(this.state.trees);
         return (
             <div className="container pb-5 pt-3" >
                 <form className="text-right">
@@ -30,7 +29,7 @@ class TreeList extends Component {
                 <div className="row">
                     <TreesConsumer>
                         {value => {
-                            //console.log(value)
+                        
                             let filteredTrees = value.products.filter(
                                 (product) =>{
                                     return product.name.toLowerCase().indexOf(this.state.search)!==-1;
